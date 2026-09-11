@@ -83,6 +83,11 @@
             padding: 36px 44px;
             min-height: 100vh;
         }
+        .page-wrapper .main-content {
+            margin-left: 0;
+            min-height: auto;
+            flex: 1;
+        }
         .page-title {
             font-size: 30px;
             color: var(--text-dark);
@@ -358,6 +363,39 @@
         .badge.works { background: #dcfce7; color: #166534; }
         .badge.questions { background: #fef3c7; color: #92400e; }
         .badge.quick { background: #f3e8ff; color: #6b21a8; }
+        /* FOOTER */
+        .page-wrapper {
+            margin-left: 290px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .site-footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 14px 20px;
+            font-size: 13px;
+            border-top: 3px solid var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+        .site-footer a {
+            color: #818cf8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .site-footer a:hover { color: white; text-decoration: underline; }
+        .site-footer .heart { color: #ef4444; }
+        @media (max-width: 900px) {
+            .page-wrapper { margin-left: 0; }
+        }
     </style>
 </head>
 <body>
@@ -374,9 +412,14 @@
     <div id="topicList"></div>
 </div>
 
-<!-- MAIN CONTENT -->
-<div class="main-content" id="mainContent">
-    <!-- Pages will be rendered here dynamically -->
+<!-- MAIN CONTENT WRAPPER -->
+<div class="page-wrapper">
+    <div class="main-content" id="mainContent">
+        <!-- Pages will be rendered here dynamically -->
+    </div>
+    <footer class="site-footer">
+        Developed by <a href="https://www.github.com/shakkhorpaul50-ai" target="_blank" rel="noopener">Shakkhor Paul</a> <span class="heart">♥</span> • <a href="https://www.github.com/shakkhorpaul50-ai" target="_blank" rel="noopener">www.github.com/shakkhorpaul50-ai</a> • © 2026
+    </footer>
 </div>
 
 <script>
