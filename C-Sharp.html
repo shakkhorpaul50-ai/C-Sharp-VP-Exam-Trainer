@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -512,7 +512,7 @@
 <!-- SIDEBAR -->
 <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
-        <h1>📖 C# VP Exam Trainer</h1>
+        <h1> C# VP Exam Trainer</h1>
         <p>9 Topics • 27 Problems • Code Checker</p>
         <div class="progress-bar"><div class="progress-fill" id="overallProgress"></div></div>
     </div>
@@ -525,7 +525,7 @@
         <!-- Pages will be rendered here dynamically -->
     </div>
     <footer class="site-footer">
-        Developed by <a href="https://www.github.com/shakkhorpaul50-ai" target="_blank" rel="noopener">Shakkhor Paul</a> <span class="heart">♥</span> • <a href="https://www.github.com/shakkhorpaul50-ai" target="_blank" rel="noopener">www.github.com/shakkhorpaul50-ai</a> • © 2026
+        Developed by <a href="https://www.github.com/shakkhorpaul50-ai" target="_blank" rel="noopener">Shakkhor Paul</a> <span class="heart"></span> • <a href="https://www.github.com/shakkhorpaul50-ai" target="_blank" rel="noopener">www.github.com/shakkhorpaul50-ai</a> • © 2026
     </footer>
 </div>
 
@@ -539,7 +539,7 @@ const topics = [
     {
         id: 'polymorphism',
         name: 'Polymorphism',
-        icon: '🔄',
+        icon: '',
         syntax: `<div class="card">
             <h3>Polymorphism — Syntax Reference</h3>
             <p><strong>Polymorphism</strong> means "many forms" — the same method call behaves differently based on the actual object.</p>
@@ -641,7 +641,7 @@ Animal[] zoo = <span class="kw">new</span> Animal[] { <span class="kw">new</span
             <p><strong>Why it matters:</strong> If you add a new animal class (e.g., <code>Lion</code>), you don't need to change any existing code. The loop stays the same. This is the <strong>Open-Closed Principle</strong> in action.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>⚡ Quick Learn — Polymorphism in 60 Seconds</h3>
+            <h3> Quick Learn — Polymorphism in 60 Seconds</h3>
             <ul>
                 <li><strong>Polymorphism</strong> = same method call, different behavior based on object type</li>
                 <li><strong>Static</strong> (compile-time): Method <em>Overloading</em> — same name, different params</li>
@@ -650,7 +650,7 @@ Animal[] zoo = <span class="kw">new</span> Animal[] { <span class="kw">new</span
                 <li>Runtime decides which method to call based on the <strong>actual object</strong>, not the variable type</li>
                 <li>You can store a child object in a parent variable: <code>Animal a = new Dog();</code></li>
             </ul>
-            <div class="quick-tip">💡 EXAM TRICK: If the question says "different animals make different sounds" or "shapes have different area logic" → It's asking for Polymorphism using <code>virtual</code> + <code>override</code>!</div>
+            <div class="quick-tip"> EXAM TRICK: If the question says "different animals make different sounds" or "shapes have different area logic" → It's asking for Polymorphism using <code>virtual</code> + <code>override</code>!</div>
         </div>`,
         questions: [
             {
@@ -700,7 +700,7 @@ Animal[] zoo = <span class="kw">new</span> Animal[] { <span class="kw">new</span
     {
         id: 'abstraction',
         name: 'Abstraction & Interface',
-        icon: '🎭',
+        icon: '',
         syntax: `<div class="card">
             <h3>Abstraction & Interface — Syntax Reference</h3>
             <p><strong>Abstraction</strong> hides details, shows only essentials. <strong>Interface</strong> is a pure contract — it says <em>what</em> to do, not <em>how</em>.</p>
@@ -821,7 +821,7 @@ Animal[] zoo = <span class="kw">new</span> Animal[] { <span class="kw">new</span
             <p><strong>Key Insight:</strong> The <code>AudioFile</code> and <code>VideoFile</code> are <em>related</em> (both are media items), so they share the abstract class <code>MediaItem</code>. But <code>Download()</code> is a <em>capability</em> that could apply to any class — even a <code>Document</code> — so it's an interface.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>⚡ Quick Learn — Abstraction & Interface in 60 Seconds</h3>
+            <h3> Quick Learn — Abstraction & Interface in 60 Seconds</h3>
             <ul>
                 <li><strong>Abstraction</strong> = "Show what it does, hide how it does it"</li>
                 <li><strong>Abstract class</strong> = partially implemented class, cannot be instantiated directly</li>
@@ -832,7 +832,7 @@ Animal[] zoo = <span class="kw">new</span> Animal[] { <span class="kw">new</span
                 <li>Use <strong>abstract class</strong> for related objects sharing common state (Vehicle → Car, Bike)</li>
                 <li>Use <strong>interface</strong> for capabilities across unrelated classes (IFlyable → Bird, Airplane)</li>
             </ul>
-            <div class="quick-tip">💡 EXAM TRICK: If the question says "unrelated classes need same method" → Interface. If it says "shared base with common fields" → Abstract Class!</div>
+            <div class="quick-tip"> EXAM TRICK: If the question says "unrelated classes need same method" → Interface. If it says "shared base with common fields" → Abstract Class!</div>
         </div>`,
         questions: [
             {
@@ -882,7 +882,7 @@ Animal[] zoo = <span class="kw">new</span> Animal[] { <span class="kw">new</span
     {
         id: 'delegation',
         name: 'Delegation & Aggregation',
-        icon: '🤝',
+        icon: '',
         syntax: `<div class="card">
             <h3>Delegation & Aggregation — Syntax Reference</h3>
             <p><strong>Aggregation</strong> = "Has-A" relationship. <strong>Delegation</strong> = one object passes work to another.</p>
@@ -1015,7 +1015,7 @@ Console.WriteLine(found.Author);  <span class="com">// Output: Robert Martin</sp
             <p>Notice: the <code>Library</code> class doesn't implement search logic itself. It <strong>delegates</strong> that to <code>SearchService</code>. And the <code>Books</code> are passed in from outside, so if the Library is destroyed, the Book list still exists — that's <strong>Aggregation</strong>.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>⚡ Quick Learn — Delegation & Aggregation in 60 Seconds</h3>
+            <h3> Quick Learn — Delegation & Aggregation in 60 Seconds</h3>
             <ul>
                 <li><strong>Aggregation</strong> = "Has-A" relationship (Department HAS Employees)</li>
                 <li>Aggregated objects are <strong>passed in</strong> via constructor or property, not created inside</li>
@@ -1027,7 +1027,7 @@ Console.WriteLine(found.Author);  <span class="com">// Output: Robert Martin</sp
                 <li>Call delegate: <code>int result = op(5, 3);</code></li>
                 <li>Delegation promotes <strong>code reuse</strong> without inheritance</li>
             </ul>
-            <div class="quick-tip">💡 EXAM TRICK: If the question says "Department contains employees" or "Library has books" → Aggregation. If it says "pass a method as a parameter" or "callback function" → Delegation!</div>
+            <div class="quick-tip"> EXAM TRICK: If the question says "Department contains employees" or "Library has books" → Aggregation. If it says "pass a method as a parameter" or "callback function" → Delegation!</div>
         </div>`,
         questions: [
             {
@@ -1076,7 +1076,7 @@ Console.WriteLine(found.Author);  <span class="com">// Output: Robert Martin</sp
     {
         id: 'exception',
         name: 'Exception Handling',
-        icon: '⚠ ï¸',
+        icon: ' ï¸',
         syntax: `<div class="card">
             <h3>Exception Handling — Syntax Reference</h3>
             <p>Handles runtime errors so the program doesn't crash. Uses <code>try</code>, <code>catch</code>, <code>finally</code>, <code>throw</code>.</p>
@@ -1209,7 +1209,7 @@ acc.Withdraw(<span class="num">200</span>);     <span class="com">// Output: Wit
             </ol>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>⚡ Quick Learn — Exception Handling in 60 Seconds</h3>
+            <h3> Quick Learn — Exception Handling in 60 Seconds</h3>
             <ul>
                 <li><code>try</code> = wrap risky code that might fail</li>
                 <li><code>catch</code> = handle the specific error (e.g., <code>catch (DivideByZeroException ex)</code>)</li>
@@ -1220,7 +1220,7 @@ acc.Withdraw(<span class="num">200</span>);     <span class="com">// Output: Wit
                 <li>Use <code>$"Error: {ex.Message}"</code> for string interpolation in catch blocks</li>
                 <li>Exception handling prevents <strong>program crashes</strong></li>
             </ul>
-            <div class="quick-tip">💡 EXAM TRICK: The flow is always: try → (exception?) → catch → finally. The finally block runs NO MATTER WHAT, even if no exception occurred!</div>
+            <div class="quick-tip"> EXAM TRICK: The flow is always: try → (exception?) → catch → finally. The finally block runs NO MATTER WHAT, even if no exception occurred!</div>
         </div>`,
         questions: [
             {
@@ -1267,7 +1267,7 @@ acc.Withdraw(<span class="num">200</span>);     <span class="com">// Output: Wit
     {
         id: 'routines',
         name: 'Routines (Methods)',
-        icon: '⚙ï¸',
+        icon: 'ï¸',
         syntax: `<div class="card">
             <h3>Routines (Methods) — Syntax Reference</h3>
             <p>A <strong>method</strong> is a named block that does a task. It may return a value or nothing (<code>void</code>).</p>
@@ -1406,7 +1406,7 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
             <p><strong>Method Overloading</strong> lets you have multiple methods with the same name but different parameter lists. The compiler picks the right one based on what you pass in.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>⚡ Quick Learn — Routines (Methods) in 60 Seconds</h3>
+            <h3> Quick Learn — Routines (Methods) in 60 Seconds</h3>
             <ul>
                 <li>A <strong>method</strong> is a named block of code that does a specific task</li>
                 <li><code>void</code> = returns nothing, <code>int</code>/<code>string</code> = returns a value</li>
@@ -1418,7 +1418,7 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
                 <li><code>return</code> exits the method and sends a value back</li>
                 <li>Methods promote <strong>code reuse</strong> and <strong>modularity</strong></li>
             </ul>
-            <div class="quick-tip">💡 EXAM TRICK: If the question asks for "reusable code block" or "same operation with different inputs" → Methods/Overloading!</div>
+            <div class="quick-tip"> EXAM TRICK: If the question asks for "reusable code block" or "same operation with different inputs" → Methods/Overloading!</div>
         </div>`,
         questions: [
             {
@@ -1467,7 +1467,7 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
     {
         id: 'razor',
         name: 'Razor View Page',
-        icon: '📄',
+        icon: '',
         syntax: `<div class="card">
             <h3>Razor View Page (.cshtml) — Syntax Reference</h3>
             <p><strong>Razor</strong> lets you mix C# and HTML using <code>@</code>.</p>
@@ -1611,7 +1611,7 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
             <p>The browser <strong>never sees</strong> the <code>@</code> symbols or C# code — it only gets pure HTML!</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>⚡ Quick Learn — Razor View in 60 Seconds</h3>
+            <h3> Quick Learn — Razor View in 60 Seconds</h3>
             <ul>
                 <li>Razor = HTML + C# mixed together using <code>@</code> symbol</li>
                 <li><code>@model</code> declares what data type the view receives (top of page)</li>
@@ -1624,7 +1624,7 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
                 <li><code>@* comment *</code> = Razor comment (not in final HTML)</li>
                 <li>File extension is <code>.cshtml</code></li>
             </ul>
-            <div class="quick-tip">💡 EXAM TRICK: The browser NEVER sees C# code. Razor engine converts @-code to pure HTML before sending to the browser!</div>
+            <div class="quick-tip"> EXAM TRICK: The browser NEVER sees C# code. Razor engine converts @-code to pure HTML before sending to the browser!</div>
         </div>`,
         questions: [
             {
@@ -1674,7 +1674,7 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
     {
         id: 'linq',
         name: 'LINQ',
-        icon: '🔍',
+        icon: '',
         syntax: `<div class="card">
             <h3>LINQ (Language Integrated Query) — Syntax Reference</h3>
             <p><strong>LINQ</strong> = query data from collections, databases, XML in one style.</p>
@@ -1800,7 +1800,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
             <p><strong>Important:</strong> LINQ uses <strong>deferred execution</strong> — the query doesn't actually run until you iterate over it (e.g., with foreach) or call <code>.ToList()</code> / <code>.First()</code> etc.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>⚡ Quick Learn — LINQ in 60 Seconds</h3>
+            <h3> Quick Learn — LINQ in 60 Seconds</h3>
             <ul>
                 <li>LINQ = query data from collections in a clean, readable way</li>
                 <li>Two syntaxes: <strong>Query</strong> (<code>from...where...select</code>) and <strong>Method</strong> (<code>.Where().Select()</code>)</li>
@@ -1815,7 +1815,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
                 <li><code>.ToList()</code> = execute query and convert to list</li>
                 <li><strong>Deferred execution</strong>: query runs only when iterated or materialized</li>
             </ul>
-            <div class="quick-tip">💡 EXAM TRICK: Lambda <code>=&gt;</code> is read as "goes to" or "for each." <code>s =&gt; s.Name</code> means "for each s, return s.Name"!</div>
+            <div class="quick-tip"> EXAM TRICK: Lambda <code>=&gt;</code> is read as "goes to" or "for each." <code>s =&gt; s.Name</code> means "for each s, return s.Name"!</div>
         </div>`,
         questions: [
             {
@@ -1864,7 +1864,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
     {
         id: 'annotation',
         name: 'Data Annotation',
-        icon: '🏷ï¸',
+        icon: 'ï¸',
         syntax: `<div class="card">
             <h3>Data Annotation — Syntax Reference</h3>
             <p>Attributes <code>[...]</code> on model properties. Namespace: <code>System.ComponentModel.DataAnnotations</code></p>
@@ -2005,7 +2005,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
             <p><strong>Key insight:</strong> Data Annotations work with <code>@Html.ValidationMessageFor()</code> in Razor views automatically. You define the rule once on the model, and both client-side (if enabled) and server-side validation use it.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>⚡ Quick Learn — Data Annotation in 60 Seconds</h3>
+            <h3> Quick Learn — Data Annotation in 60 Seconds</h3>
             <ul>
                 <li>Data Annotations = attributes <code>[...]</code> on model properties</li>
                 <li>Namespace: <code>System.ComponentModel.DataAnnotations</code></li>
@@ -2020,7 +2020,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
                 <li>Controller checks <code>ModelState.IsValid</code> to see if validation passed</li>
                 <li>Razor <code>@Html.ValidationMessageFor()</code> shows the error automatically</li>
             </ul>
-            <div class="quick-tip">💡 EXAM TRICK: Data Annotations = define once on the model → automatic validation on BOTH server (Controller) and client (Razor View)!</div>
+            <div class="quick-tip"> EXAM TRICK: Data Annotations = define once on the model → automatic validation on BOTH server (Controller) and client (Razor View)!</div>
         </div>`,
         questions: [
             {
@@ -2072,7 +2072,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
     {
         id: 'mvc',
         name: 'MVC Theory',
-        icon: '🏗ï¸',
+        icon: 'ï¸',
         syntax: `<div class="card">
             <h3>MVC (Model-View-Controller) — Architecture</h3>
             <p>Three layers, one job each. Model = data, View = UI, Controller = brain.</p>
@@ -2233,7 +2233,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
             <p><strong>Routing:</strong> Clean URLs like <code>/Product/Details/5</code> instead of <code>product.aspx?id=5</code>.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>⚡ Quick Learn — MVC Theory in 60 Seconds</h3>
+            <h3> Quick Learn — MVC Theory in 60 Seconds</h3>
             <ul>
                 <li><strong>M</strong>odel = Data + Business Logic (database, validation, rules)</li>
                 <li><strong>V</strong>iew = UI (Razor .cshtml files, pure presentation)</li>
@@ -2248,7 +2248,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
                 <li>URL pattern: <code>/Controller/Action/Id</code></li>
                 <li><strong>Separation of Concerns</strong> = each part does ONE thing</li>
             </ul>
-            <div class="quick-tip">💡 EXAM TRICK: Restaurant analogy — Waiter=Controller, Kitchen=Model, Plate=View. Controller NEVER shows data directly; it always passes it through the Model to the View!</div>
+            <div class="quick-tip"> EXAM TRICK: Restaurant analogy — Waiter=Controller, Kitchen=Model, Plate=View. Controller NEVER shows data directly; it always passes it through the Model to the View!</div>
         </div>`,
         questions: [
             {
@@ -2324,7 +2324,7 @@ function renderSidebar() {
     list.innerHTML = `
         <div class="topic-group">
             <div class="topic-header ${coverActive ? 'active' : ''}" onclick="selectCover()" id="topicHeader-cover">
-                <span>🏠</span>
+                <span></span>
                 <span>Cover Page</span>
                 <span class="arrow">▶</span>
             </div>
@@ -2341,31 +2341,31 @@ function renderSidebar() {
             <div class="sub-pages ${i === currentTopic ? 'show' : ''}" id="subPages-${i}">
                 <div class="sub-page-link ${currentSubPage === 'syntax' && i === currentTopic ? 'active' : ''}" 
                      onclick="selectSubPage(${i}, 'syntax')">
-                    📝 Syntax <span class="badge syntax">Page 1</span>
+                     Syntax <span class="badge syntax">Page 1</span>
                 </div>
                 <div class="sub-page-link ${currentSubPage === 'howItWorks' && i === currentTopic ? 'active' : ''}" 
                      onclick="selectSubPage(${i}, 'howItWorks')">
-                    🔧 How It Works <span class="badge works">Page 2</span>
+                     How It Works <span class="badge works">Page 2</span>
                 </div>
                 <div class="sub-page-link ${currentSubPage === 'quickLearn' && i === currentTopic ? 'active' : ''}" 
                      onclick="selectSubPage(${i}, 'quickLearn')">
-                    ⚡ Quick Learn <span class="badge quick">Cheat Sheet</span>
+                     Quick Learn <span class="badge quick">Cheat Sheet</span>
                 </div>
                 <div style="height:1px;background:#334155;margin:8px 16px 6px 0;"></div>
-                <div style="font-size:10px;color:#64748b;padding:2px 16px;letter-spacing:0.6px;font-weight:700;">📝 INDIVIDUAL PROBLEMS</div>
+                <div style="font-size:10px;color:#64748b;padding:2px 16px;letter-spacing:0.6px;font-weight:700;"> INDIVIDUAL PROBLEMS</div>
                 ${t.questions.map((q, qi) => {
                     const qPage = `q${qi}`;
                     const isActive = currentSubPage === qPage && i === currentTopic;
                     const qId = `${t.id}-${qi}`;
                     const solved = solvedQuestions[qId];
                     return `<div class="sub-page-link ${isActive ? 'active' : ''}" onclick="selectSubPage(${i}, '${qPage}')" style="${solved ? 'border-left-color:var(--success);color:var(--success);' : ''}">
-                        ${solved ? '✅' : 'â“'} Problem ${qi+1} <span class="badge ${solved ? 'works' : 'questions'}" style="${solved ? 'background:#dcfce7;color:#166534' : ''}">${solved ? 'Solved' : 'Q'+(qi+1)}</span>
+                        ${solved ? '' : 'â“'} Problem ${qi+1} <span class="badge ${solved ? 'works' : 'questions'}" style="${solved ? 'background:#dcfce7;color:#166534' : ''}">${solved ? 'Solved' : 'Q'+(qi+1)}</span>
                         <div style="font-size:11px;color:inherit;opacity:0.7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px">${q.title}</div>
                     </div>`;
                 }).join('')}
                 <div class="sub-page-link ${currentSubPage === 'questions' && i === currentTopic ? 'active' : ''}" 
                      onclick="selectSubPage(${i}, 'questions')">
-                    📋 All Problems <span class="badge questions">Overview</span>
+                     All Problems <span class="badge questions">Overview</span>
                 </div>
             </div>
         </div>
@@ -2400,22 +2400,22 @@ function renderPage() {
         content = `
             <div class="cover-hero">
                 <div style="position:relative;z-index:1;">
-                    <div style="display:inline-block;background:rgba(255,255,255,0.15);padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:14px;border:1px solid rgba(255,255,255,0.2);">📍… Last-Day Crash Course • 2026 • 9 Topics • 27 Problems</div>
-                    <h1>📖 C# Visual Programming<br>Exam Trainer</h1>
+                    <div style="display:inline-block;background:rgba(255,255,255,0.15);padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:14px;border:1px solid rgba(255,255,255,0.2);">… Last-Day Crash Course • © 2026 • 9 Topics • 27 Problems</div>
+                    <h1> C# Visual Programming<br>Exam Trainer</h1>
                     <p>Master 9 core topics, solve 27 real-life problems, and get instant keyword-based checking — everything you need the night before the exam, in one clean trainer.</p>
                     <div class="cover-stats">
-                        <div class="cover-stat">📚 9 Topics</div>
-                        <div class="cover-stat">🧩 27 Problems</div>
-                        <div class="cover-stat">⚡ Instant Checker</div>
-                        <div class="cover-stat">✅ ${solvedCount}/${totalProblems} Solved • ${progress}%</div>
+                        <div class="cover-stat"> 9 Topics</div>
+                        <div class="cover-stat"> 27 Problems</div>
+                        <div class="cover-stat"> Instant Checker</div>
+                        <div class="cover-stat"> ${solvedCount}/${totalProblems} Solved • ${progress}%</div>
                     </div>
-                    <button class="cover-btn" onclick="selectSubPage(0,'syntax')">🚀 Start Learning — Polymorphism →</button>
-                    <button class="cover-btn secondary" onclick="selectCover()" style="margin-left:10px;">🏠 Cover</button>
+                    <button class="cover-btn" onclick="selectSubPage(0,'syntax')"> Start Learning — Polymorphism →</button>
+                    <button class="cover-btn secondary" onclick="selectCover()" style="margin-left:10px;"> Cover</button>
                 </div>
             </div>
 
             <div class="card">
-                <h3>🗺ï¸ What You'll Master — Click Any Card to Jump</h3>
+                <h3>ï¸ What You'll Master — Click Any Card to Jump</h3>
                 <p style="color:var(--text-light);font-size:14px;margin-bottom:10px;">Each topic has 4 layers: Syntax (with line gaps) → How It Works → Quick Learn → 3 Individual Problem Pages.</p>
                 <div class="cover-grid">
                     ${topics.map((t,i)=>`<div class="cover-card" onclick="selectSubPage(${i},'syntax')"><div class="icon">${t.icon}</div><h4>${i+1}. ${t.name}</h4><p>${t.questions.length} problems • Syntax + How It Works + Quick Learn</p><div style="margin-top:8px;font-size:12px;color:var(--primary);font-weight:700;">Open →</div></div>`).join('')}
@@ -2423,18 +2423,18 @@ function renderPage() {
             </div>
 
             <div class="card">
-                <h3>⚡ How to Use (30-Minute Loop)</h3>
+                <h3> How to Use (30-Minute Loop)</h3>
                 <div class="cover-steps">
                     <div class="cover-step"><div class="num">1</div><h5>Learn Syntax</h5><p>Spaced blocks, one concept per line</p></div>
                     <div class="cover-step"><div class="num">2</div><h5>How It Works</h5><p>Real story + flow diagram</p></div>
                     <div class="cover-step"><div class="num">3</div><h5>60-sec Cheat</h5><p>Quick Learn + Exam Trick</p></div>
                     <div class="cover-step"><div class="num">4</div><h5>Solve</h5><p>One problem per page, instant check</p></div>
                 </div>
-                <div class="quick-tip">💡 Pro tip: The checker looks for keywords exactly as examiners do — include <code>virtual</code>, <code>override</code>, <code>List&lt;T&gt;</code> etc. as required.</div>
+                <div class="quick-tip"> Pro tip: The checker looks for keywords exactly as examiners do — include <code>virtual</code>, <code>override</code>, <code>List&lt;T&gt;</code> etc. as required.</div>
             </div>
 
             <div class="card" style="background: linear-gradient(135deg, #fef3c7, #fff7ed); border-color: #fde68a;">
-                <h3>🎯 Exam Day Checklist</h3>
+                <h3> Exam Day Checklist</h3>
                 <ul style="margin-left:18px; line-height:1.9; font-size:14px;">
                     <li><code>virtual</code> in base, <code>override</code> in child — polymorphism</li>
                     <li>Unrelated → <code>interface</code>, related + shared state → <code>abstract class</code></li>
@@ -2448,8 +2448,8 @@ function renderPage() {
             <div class="card" style="text-align:center; background: linear-gradient(135deg, #eef2ff, #f0fdf4); border: 2px dashed var(--primary);">
                 <h3>Ready to Start?</h3>
                 <p style="color:var(--text-light);">You are ${progress}% done. Continue where you left off or start fresh.</p>
-                <button class="cover-btn" onclick="selectSubPage(0,'syntax')">📝 Start with Syntax — Polymorphism</button>
-                <button class="cover-btn secondary" onclick="selectSubPage(0,'q0')" style="margin-left:10px;">🧩 Jump to First Problem</button>
+                <button class="cover-btn" onclick="selectSubPage(0,'syntax')"> Start with Syntax — Polymorphism</button>
+                <button class="cover-btn secondary" onclick="selectSubPage(0,'q0')" style="margin-left:10px;"> Jump to First Problem</button>
             </div>
         `;
     } else {
@@ -2487,7 +2487,7 @@ function renderPage() {
             <div class="page-title">${topic.icon} ${topic.name} — Problem ${qi + 1} of ${topic.questions.length}</div>
             <div class="page-subtitle">Individual problem — Focus on one challenge at a time. Solve and check instantly.</div>
             <div style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:8px;padding:12px 16px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
-                <div style="font-size:13px;color:var(--primary-dark);font-weight:600;">📍 You are on Problem ${qi + 1} — ${q.title}</div>
+                <div style="font-size:13px;color:var(--primary-dark);font-weight:600;"> You are on Problem ${qi + 1} — ${q.title}</div>
                 <div style="font-size:12px;color:var(--text-light);">Progress: ${qi + 1} / ${topic.questions.length} in this topic</div>
             </div>
             ${topic.quickLearn}
@@ -2498,7 +2498,7 @@ function renderPage() {
                 
                 <button class="btn btn-secondary" style="margin-bottom: 14px; font-size: 13px; padding: 6px 14px;" 
                         onclick="toggleHint('${qId}')">
-                    💡 Show Hint
+                     Show Hint
                 </button>
                 
                 <div class="hint-box" id="hint-${qId}">
@@ -2528,7 +2528,7 @@ class Program
                         ✓ Check Code
                     </button>
                     <button class="btn btn-secondary" onclick="clearCode('${qId}')">
-                        🗑 Clear
+                         Clear
                     </button>
                     <button class="btn btn-secondary" onclick="toggleExpand('${qId}')" style="margin-left:auto;font-size:12px;padding:8px 14px;">⛶ Toggle Full Height</button>
                 </div>
@@ -2541,7 +2541,7 @@ class Program
             <div class="page-title">${topic.icon} ${topic.name} — Practice Questions</div>
             <div class="page-subtitle">Page 3 of 3 — Solve 3 real-life problems. Write code and check it!</div>
             ${topic.quickLearn}
-            <h2 style="margin: 28px 0 10px; color: var(--text-dark);">📝 3 Real-Life Problems to Solve</h2>
+            <h2 style="margin: 28px 0 10px; color: var(--text-dark);"> 3 Real-Life Problems to Solve</h2>
             <p style="color: var(--text-light); margin-bottom: 20px;">Write C# code in the editor for each problem. Click "Check Code" to verify your solution.</p>
         `;
         
@@ -2556,7 +2556,7 @@ class Program
                     
                     <button class="btn btn-secondary" style="margin-bottom: 14px; font-size: 13px; padding: 6px 14px;" 
                             onclick="toggleHint('${qId}')">
-                        💡 Show Hint
+                         Show Hint
                     </button>
                     
                     <div class="hint-box" id="hint-${qId}">
@@ -2586,7 +2586,7 @@ class Program
                             ✓ Check Code
                         </button>
                         <button class="btn btn-secondary" onclick="clearCode('${qId}')">
-                            🗑 Clear
+                             Clear
                         </button>
                         <button class="btn btn-secondary" onclick="toggleExpand('${qId}')" style="margin-left:auto;font-size:12px;padding:8px 14px;">⛶ Toggle Full Height</button>
                     </div>
@@ -2622,7 +2622,7 @@ class Program
          if (currentTopic < topics.length - 1) {
              content += `<button class="btn btn-primary" onclick="selectSubPage(${currentTopic + 1}, 'syntax')">Next Topic: ${topics[currentTopic + 1].name} →</button>`;
          } else {
-             content += `<button class="btn btn-primary" onclick="selectSubPage(0, 'syntax')">🏠 Back to Start</button>`;
+             content += `<button class="btn btn-primary" onclick="selectSubPage(0, 'syntax')"> Back to Start</button>`;
          }
      }
     content += `</div>`;
@@ -2647,7 +2647,7 @@ function checkCode(topicId, questionIndex) {
     
     if (!code.trim()) {
         feedbackBox.className = 'feedback-box error show';
-        feedbackBox.innerHTML = '⚠ ï¸ Your code editor is empty. Please write some code first!';
+        feedbackBox.innerHTML = ' ï¸ Your code editor is empty. Please write some code first!';
         questionCard.className = 'question-card failed';
         return;
     }
@@ -2665,13 +2665,13 @@ function checkCode(topicId, questionIndex) {
     let feedbackHtml = '';
     
     if (allFound) {
-        feedbackHtml = `<strong>✅ Excellent! All requirements met!</strong><br>Your code contains all the key elements needed for this problem.`;
+        feedbackHtml = `<strong> Excellent! All requirements met!</strong><br>Your code contains all the key elements needed for this problem.`;
         feedbackHtml += `<ul class="req-list">`;
         results.forEach(r => {
             feedbackHtml += `<li><span class="req-check found">✓</span> ${r.desc} — <code style="background:#d1fae5;padding:1px 4px;border-radius:3px;">${r.keyword}</code></li>`;
         });
         feedbackHtml += `</ul>`;
-        feedbackHtml += `<br><strong>💡 Note:</strong> This is a keyword-based checker. In a real exam, make sure your code also compiles and runs correctly!`;
+        feedbackHtml += `<br><strong> Note:</strong> This is a keyword-based checker. In a real exam, make sure your code also compiles and runs correctly!`;
         
         feedbackBox.className = 'feedback-box success show';
         questionCard.className = 'question-card solved';
@@ -2680,7 +2680,7 @@ function checkCode(topicId, questionIndex) {
         const foundCount = results.filter(r => r.found).length;
         const totalCount = results.length;
         
-        feedbackHtml = `<strong>📊 Progress: ${foundCount}/${totalCount} requirements found</strong>`;
+        feedbackHtml = `<strong> Progress: ${foundCount}/${totalCount} requirements found</strong>`;
         feedbackHtml += `<ul class="req-list">`;
         results.forEach(r => {
             const icon = r.found ? '✓' : '✗';
@@ -2691,7 +2691,7 @@ function checkCode(topicId, questionIndex) {
         
         const missing = results.filter(r => !r.found);
         if (missing.length > 0) {
-            feedbackHtml += `<br><strong>⚠ ï¸ Missing:</strong> ${missing.map(m => `"${m.keyword}"`).join(', ')}`;
+            feedbackHtml += `<br><strong> ï¸ Missing:</strong> ${missing.map(m => `"${m.keyword}"`).join(', ')}`;
             feedbackHtml += `<br><em>Check the hint above for guidance on what to include.</em>`;
         }
         
@@ -2721,11 +2721,11 @@ function toggleExpand(qId) {
     if (!editor) return;
     editor.classList.toggle('expanded');
     const isExpanded = editor.classList.contains('expanded');
-    if (btn) btn.textContent = isExpanded ? '🗺— Collapse' : '⛶ Expand';
+    if (btn) btn.textContent = isExpanded ? '— Collapse' : '⛶ Expand';
     // Also update the bottom toggle button text if present
     const bottomBtns = document.querySelectorAll(`button[onclick="toggleExpand('${qId}')"]`);
     bottomBtns.forEach(b => {
-        if (b.id !== `expandBtn-${qId}`) b.textContent = isExpanded ? '🗺— Collapse Full Height' : '⛶ Toggle Full Height';
+        if (b.id !== `expandBtn-${qId}`) b.textContent = isExpanded ? '— Collapse Full Height' : '⛶ Toggle Full Height';
     });
     if (isExpanded) {
         setTimeout(() => editor.scrollIntoView({behavior:'smooth', block:'center'}), 100);
