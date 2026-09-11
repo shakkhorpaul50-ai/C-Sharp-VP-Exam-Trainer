@@ -265,7 +265,7 @@
         .quick-learn h3 { color: var(--primary-dark); font-size: 20px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
         .quick-learn ul { list-style: none; }
         .quick-learn li { padding: 6px 0; font-size: 14px; display: flex; gap: 10px; align-items: flex-start; }
-        .quick-learn li::before { content: "âœ¦"; color: var(--primary); font-weight: bold; }
+        .quick-learn li::before { content: "✦"; color: var(--primary); font-weight: bold; }
         .quick-tip {
             background: #fef3c7;
             padding: 10px 16px;
@@ -507,13 +507,13 @@
 </head>
 <body>
 
-<button class="toggle-sidebar" onclick="toggleSidebar()">â˜°</button>
+<button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
 
 <!-- SIDEBAR -->
 <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
-        <h1>ðŸ“– C# VP Exam Trainer</h1>
-        <p>9 Topics â€¢ 27 Problems â€¢ Code Checker</p>
+        <h1>📖 C# VP Exam Trainer</h1>
+        <p>9 Topics • 27 Problems • Code Checker</p>
         <div class="progress-bar"><div class="progress-fill" id="overallProgress"></div></div>
     </div>
     <div id="topicList"></div>
@@ -525,7 +525,7 @@
         <!-- Pages will be rendered here dynamically -->
     </div>
     <footer class="site-footer">
-        Developed by <a href="https://www.facebook.com/profile.php?id=100023479221437" target="_blank" rel="noopener">Shakkhor Paul</a> <span class="heart">â™¥</span> â€¢ <a href="https://www.github.com/shakkhorpaul50-ai" target="_blank" rel="noopener">www.github.com/shakkhorpaul50-ai</a> â€¢ Â© 2026
+        Developed by <a href="https://www.github.com/shakkhorpaul50-ai" target="_blank" rel="noopener">Shakkhor Paul</a> <span class="heart">♥</span> • <a href="https://www.github.com/shakkhorpaul50-ai" target="_blank" rel="noopener">www.github.com/shakkhorpaul50-ai</a> • © 2026
     </footer>
 </div>
 
@@ -539,12 +539,12 @@ const topics = [
     {
         id: 'polymorphism',
         name: 'Polymorphism',
-        icon: 'ðŸ”„',
+        icon: '🔄',
         syntax: `<div class="card">
-            <h3>Polymorphism â€” Syntax Reference</h3>
-            <p><strong>Polymorphism</strong> means "many forms" â€” the same method call behaves differently based on the actual object.</p>
+            <h3>Polymorphism — Syntax Reference</h3>
+            <p><strong>Polymorphism</strong> means "many forms" — the same method call behaves differently based on the actual object.</p>
 
-            <div class="syntax-section">1ï¸âƒ£ Static Polymorphism â€” Method Overloading (Compile-time)</div>
+            <div class="syntax-section">1ï¸âƒ£ Static Polymorphism — Method Overloading (Compile-time)</div>
             <p class="syntax-desc">Same method name, different parameter list. No extra keyword needed. The compiler chooses the right version.</p>
             <div class="code-block"><span class="com">// Overloading: same name, different parameters</span>
 
@@ -566,7 +566,7 @@ const topics = [
     }
 }</div>
 
-            <div class="syntax-section">2ï¸âƒ£ Dynamic Polymorphism â€” Method Overriding (Run-time)</div>
+            <div class="syntax-section">2ï¸âƒ£ Dynamic Polymorphism — Method Overriding (Run-time)</div>
             <p class="syntax-desc">Base class marks method with <code>virtual</code>. Child class replaces it with <code>override</code>.</p>
             <div class="code-block"><span class="com">// Base class: allows overriding</span>
 <span class="kw">public class</span> <span class="cls">Shape</span> {
@@ -586,7 +586,7 @@ const topics = [
 
             <div class="syntax-section">3ï¸âƒ£ How to Use It</div>
             <p class="syntax-desc">Store a child object in a parent variable. The Run-time picks the correct method.</p>
-            <div class="code-block"><span class="com">// Parent reference â†’ child object</span>
+            <div class="code-block"><span class="com">// Parent reference → child object</span>
 Shape s = <span class="kw">new</span> Circle();
 
 <span class="com">// Calls Circle.Draw(), not Shape.Draw()</span>
@@ -594,9 +594,9 @@ s.Draw();  <span class="com">// Output: "Drawing a circle"</span></div>
 
             <p><strong>Key Keywords:</strong></p>
             <ul style="margin-left:20px; line-height:2; font-size:14px;">
-                <li><code style="background:#e2e8f0;padding:2px 6px;border-radius:4px;">virtual</code> â€” in base class, says "you CAN override me"</li>
-                <li><code style="background:#e2e8f0;padding:2px 6px;border-radius:4px;">override</code> â€” in child class, says "I AM replacing the base method"</li>
-                <li><code style="background:#e2e8f0;padding:2px 6px;border-radius:4px;">overload</code> â€” no keyword, just same name + different parameters</li>
+                <li><code style="background:#e2e8f0;padding:2px 6px;border-radius:4px;">virtual</code> — in base class, says "you CAN override me"</li>
+                <li><code style="background:#e2e8f0;padding:2px 6px;border-radius:4px;">override</code> — in child class, says "I AM replacing the base method"</li>
+                <li><code style="background:#e2e8f0;padding:2px 6px;border-radius:4px;">overload</code> — no keyword, just same name + different parameters</li>
             </ul>
         </div>`,
         howItWorks: `<div class="card">
@@ -631,26 +631,26 @@ Animal[] zoo = <span class="kw">new</span> Animal[] { <span class="kw">new</span
             <p>The C# runtime looks at the <strong>actual object type</strong> (not the variable type) and calls the most derived override. This is called <strong>dynamic dispatch</strong>.</p>
             <div class="flow-diagram">
                 <div class="flow-box">Animal a = new Dog()</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">a.MakeSound()</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">Runtime checks: "Is it Dog?"</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">Calls Dog.MakeSound()</div>
             </div>
             <p><strong>Why it matters:</strong> If you add a new animal class (e.g., <code>Lion</code>), you don't need to change any existing code. The loop stays the same. This is the <strong>Open-Closed Principle</strong> in action.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>âš¡ Quick Learn â€” Polymorphism in 60 Seconds</h3>
+            <h3>⚡ Quick Learn — Polymorphism in 60 Seconds</h3>
             <ul>
                 <li><strong>Polymorphism</strong> = same method call, different behavior based on object type</li>
-                <li><strong>Static</strong> (compile-time): Method <em>Overloading</em> â€” same name, different params</li>
-                <li><strong>Dynamic</strong> (run-time): Method <em>Overriding</em> â€” <code>virtual</code> + <code>override</code></li>
+                <li><strong>Static</strong> (compile-time): Method <em>Overloading</em> — same name, different params</li>
+                <li><strong>Dynamic</strong> (run-time): Method <em>Overriding</em> — <code>virtual</code> + <code>override</code></li>
                 <li>The <strong>base class</strong> declares <code>virtual</code>, the <strong>child class</strong> uses <code>override</code></li>
                 <li>Runtime decides which method to call based on the <strong>actual object</strong>, not the variable type</li>
                 <li>You can store a child object in a parent variable: <code>Animal a = new Dog();</code></li>
             </ul>
-            <div class="quick-tip">ðŸ’¡ EXAM TRICK: If the question says "different animals make different sounds" or "shapes have different area logic" â†’ It's asking for Polymorphism using <code>virtual</code> + <code>override</code>!</div>
+            <div class="quick-tip">💡 EXAM TRICK: If the question says "different animals make different sounds" or "shapes have different area logic" → It's asking for Polymorphism using <code>virtual</code> + <code>override</code>!</div>
         </div>`,
         questions: [
             {
@@ -700,10 +700,10 @@ Animal[] zoo = <span class="kw">new</span> Animal[] { <span class="kw">new</span
     {
         id: 'abstraction',
         name: 'Abstraction & Interface',
-        icon: 'ðŸŽ­',
+        icon: '🎭',
         syntax: `<div class="card">
-            <h3>Abstraction & Interface â€” Syntax Reference</h3>
-            <p><strong>Abstraction</strong> hides details, shows only essentials. <strong>Interface</strong> is a pure contract â€” it says <em>what</em> to do, not <em>how</em>.</p>
+            <h3>Abstraction & Interface — Syntax Reference</h3>
+            <p><strong>Abstraction</strong> hides details, shows only essentials. <strong>Interface</strong> is a pure contract — it says <em>what</em> to do, not <em>how</em>.</p>
 
             <div class="syntax-section">1ï¸âƒ£ Abstract Class</div>
             <p class="syntax-desc">Can have abstract methods (no body) + concrete methods (with body). Cannot be instantiated directly.</p>
@@ -767,7 +767,7 @@ Animal[] zoo = <span class="kw">new</span> Animal[] { <span class="kw">new</span
     <span class="kw">public void</span> Drive() { ... }
 }</div>
 
-            <h3 style="margin-top:22px;">Abstract Class vs Interface â€” Quick Comparison</h3>
+            <h3 style="margin-top:22px;">Abstract Class vs Interface — Quick Comparison</h3>
             <table class="compare-table">
                 <tr><th>Feature</th><th>Abstract Class</th><th>Interface</th></tr>
                 <tr><td>Keyword</td><td>abstract class</td><td>interface</td></tr>
@@ -781,7 +781,7 @@ Animal[] zoo = <span class="kw">new</span> Animal[] { <span class="kw">new</span
         </div>`,
         howItWorks: `<div class="card">
             <h3>How Abstraction & Interface Actually Work</h3>
-            <p>Imagine you are building a <strong>Media Player Application</strong>. You want it to play audio files, video files, and maybe even live streams. All of these need a <code>Play()</code> method, but they are very different things â€” an audio file has no video track, a video file has resolution settings, etc.</p>
+            <p>Imagine you are building a <strong>Media Player Application</strong>. You want it to play audio files, video files, and maybe even live streams. All of these need a <code>Play()</code> method, but they are very different things — an audio file has no video track, a video file has resolution settings, etc.</p>
             <p>You use <strong>abstraction</strong> when there is a clear hierarchy (e.g., all media items share a <code>Title</code>, <code>Duration</code>, and <code>Stop()</code> method). You use an <strong>interface</strong> when you need unrelated classes to share a capability (e.g., <code>IPlayable</code> could be implemented by <code>AudioFile</code>, <code>VideoFile</code>, and <code>StreamingRadio</code>).</p>
             <div class="code-block"><span class="com">// Abstract class provides shared state + common behavior</span>
 <span class="kw">public abstract class</span> <span class="cls">MediaItem</span> {
@@ -818,21 +818,21 @@ Animal[] zoo = <span class="kw">new</span> Animal[] { <span class="kw">new</span
         Console.WriteLine($<span class="str">"Downloading video from {url}"</span>);
     }
 }</div>
-            <p><strong>Key Insight:</strong> The <code>AudioFile</code> and <code>VideoFile</code> are <em>related</em> (both are media items), so they share the abstract class <code>MediaItem</code>. But <code>Download()</code> is a <em>capability</em> that could apply to any class â€” even a <code>Document</code> â€” so it's an interface.</p>
+            <p><strong>Key Insight:</strong> The <code>AudioFile</code> and <code>VideoFile</code> are <em>related</em> (both are media items), so they share the abstract class <code>MediaItem</code>. But <code>Download()</code> is a <em>capability</em> that could apply to any class — even a <code>Document</code> — so it's an interface.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>âš¡ Quick Learn â€” Abstraction & Interface in 60 Seconds</h3>
+            <h3>⚡ Quick Learn — Abstraction & Interface in 60 Seconds</h3>
             <ul>
                 <li><strong>Abstraction</strong> = "Show what it does, hide how it does it"</li>
                 <li><strong>Abstract class</strong> = partially implemented class, cannot be instantiated directly</li>
                 <li><strong>Interface</strong> = pure contract, only method signatures (no body, no fields)</li>
                 <li>A class can inherit <strong>ONE</strong> abstract class but implement <strong>MANY</strong> interfaces</li>
-                <li>Abstract methods use <code>abstract</code> keyword â†’ child uses <code>override</code></li>
-                <li>Interface methods need no keyword â†’ child just implements them with <code>public</code></li>
-                <li>Use <strong>abstract class</strong> for related objects sharing common state (Vehicle â†’ Car, Bike)</li>
-                <li>Use <strong>interface</strong> for capabilities across unrelated classes (IFlyable â†’ Bird, Airplane)</li>
+                <li>Abstract methods use <code>abstract</code> keyword → child uses <code>override</code></li>
+                <li>Interface methods need no keyword → child just implements them with <code>public</code></li>
+                <li>Use <strong>abstract class</strong> for related objects sharing common state (Vehicle → Car, Bike)</li>
+                <li>Use <strong>interface</strong> for capabilities across unrelated classes (IFlyable → Bird, Airplane)</li>
             </ul>
-            <div class="quick-tip">ðŸ’¡ EXAM TRICK: If the question says "unrelated classes need same method" â†’ Interface. If it says "shared base with common fields" â†’ Abstract Class!</div>
+            <div class="quick-tip">💡 EXAM TRICK: If the question says "unrelated classes need same method" → Interface. If it says "shared base with common fields" → Abstract Class!</div>
         </div>`,
         questions: [
             {
@@ -882,9 +882,9 @@ Animal[] zoo = <span class="kw">new</span> Animal[] { <span class="kw">new</span
     {
         id: 'delegation',
         name: 'Delegation & Aggregation',
-        icon: 'ðŸ¤',
+        icon: '🤝',
         syntax: `<div class="card">
-            <h3>Delegation & Aggregation â€” Syntax Reference</h3>
+            <h3>Delegation & Aggregation — Syntax Reference</h3>
             <p><strong>Aggregation</strong> = "Has-A" relationship. <strong>Delegation</strong> = one object passes work to another.</p>
 
             <div class="syntax-section">1ï¸âƒ£ Aggregation (Has-A)</div>
@@ -914,7 +914,7 @@ Animal[] zoo = <span class="kw">new</span> Animal[] { <span class="kw">new</span
     }
 }</div>
 
-            <div class="syntax-section">2ï¸âƒ£ Aggregation â€” How to Use</div>
+            <div class="syntax-section">2ï¸âƒ£ Aggregation — How to Use</div>
             <div class="code-block"><span class="com">// Create employees OUTSIDE the Department</span>
 List&lt;Employee&gt; empList = <span class="kw">new</span> List&lt;Employee&gt; {
 
@@ -926,10 +926,10 @@ List&lt;Employee&gt; empList = <span class="kw">new</span> List&lt;Employee&gt; 
 <span class="com">// Pass the list in</span>
 Department dept = <span class="kw">new</span> Department(<span class="str">"IT"</span>, empList);
 
-<span class="com">// If dept is destroyed, empList still exists â†’ Aggregation</span></div>
+<span class="com">// If dept is destroyed, empList still exists → Aggregation</span></div>
 
             <div class="syntax-section">3ï¸âƒ£ Delegation (using delegate)</div>
-            <p class="syntax-desc">A delegate is a function pointer â€” it can point to different methods with the same signature.</p>
+            <p class="syntax-desc">A delegate is a function pointer — it can point to different methods with the same signature.</p>
             <div class="code-block"><span class="com">// Step 1: Declare delegate type</span>
 <span class="kw">public delegate int</span> MathOperation(<span class="kw">int</span> x, <span class="kw">int</span> y);
 
@@ -945,19 +945,19 @@ Department dept = <span class="kw">new</span> Department(<span class="str">"IT"<
     }
 }</div>
 
-            <div class="syntax-section">4ï¸âƒ£ Delegation â€” How to Use</div>
+            <div class="syntax-section">4ï¸âƒ£ Delegation — How to Use</div>
             <div class="code-block"><span class="com">// Create calculator</span>
 Calculator calc = <span class="kw">new</span> Calculator();
 
 <span class="com">// Point delegate to Add</span>
 MathOperation op = <span class="kw">new</span> MathOperation(calc.Add);
 
-<span class="kw">int</span> result = op(<span class="num">5</span>, <span class="num">3</span>);  <span class="com">// â†’ 8 (delegates to Add)</span>
+<span class="kw">int</span> result = op(<span class="num">5</span>, <span class="num">3</span>);  <span class="com">// → 8 (delegates to Add)</span>
 
 <span class="com">// Reassign to Subtract</span>
 op = calc.Subtract;
 
-result = op(<span class="num">5</span>, <span class="num">3</span>);  <span class="com">// â†’ 2 (delegates to Subtract)</span></div>
+result = op(<span class="num">5</span>, <span class="num">3</span>);  <span class="com">// → 2 (delegates to Subtract)</span></div>
 
             <h3 style="margin-top:20px;">Aggregation vs Composition</h3>
             <table class="compare-table">
@@ -965,13 +965,13 @@ result = op(<span class="num">5</span>, <span class="num">3</span>);  <span clas
                 <tr><td>Relationship</td><td>"Has-A"</td><td>"Part-Of"</td></tr>
                 <tr><td>Lifecycle</td><td>Independent</td><td>Dependent</td></tr>
                 <tr><td>Object Creation</td><td>Passed in from outside</td><td>Created inside parent</td></tr>
-                <tr><td>Example</td><td>Department â†’ Employees</td><td>House â†’ Rooms</td></tr>
+                <tr><td>Example</td><td>Department → Employees</td><td>House → Rooms</td></tr>
             </table>
         </div>`,
         howItWorks: `<div class="card">
             <h3>How Delegation & Aggregation Actually Work</h3>
-            <p>Imagine you are building a <strong>Library Management System</strong>. A Library has Books â€” but the Books can exist without the Library (they could be moved to another library). This is <strong>Aggregation</strong>.</p>
-            <p>Now, when someone asks the Library to "search for a book by title," the Library doesn't search itself â€” it delegates the search to its internal <code>BookSearcher</code> object. This is <strong>Delegation</strong>.</p>
+            <p>Imagine you are building a <strong>Library Management System</strong>. A Library has Books — but the Books can exist without the Library (they could be moved to another library). This is <strong>Aggregation</strong>.</p>
+            <p>Now, when someone asks the Library to "search for a book by title," the Library doesn't search itself — it delegates the search to its internal <code>BookSearcher</code> object. This is <strong>Delegation</strong>.</p>
             <div class="code-block"><span class="com">// The Book class can exist independently</span>
 <span class="kw">public class</span> <span class="cls">Book</span> {
     <span class="kw">public string</span> Title { <span class="kw">get</span>; <span class="kw">set</span>; }
@@ -1012,14 +1012,14 @@ List&lt;Book&gt; myBooks = <span class="kw">new</span> List&lt;Book&gt; {
 Library lib = <span class="kw">new</span> Library(myBooks);
 Book found = lib.Search(<span class="str">"Clean Code"</span>);
 Console.WriteLine(found.Author);  <span class="com">// Output: Robert Martin</span></div>
-            <p>Notice: the <code>Library</code> class doesn't implement search logic itself. It <strong>delegates</strong> that to <code>SearchService</code>. And the <code>Books</code> are passed in from outside, so if the Library is destroyed, the Book list still exists â€” that's <strong>Aggregation</strong>.</p>
+            <p>Notice: the <code>Library</code> class doesn't implement search logic itself. It <strong>delegates</strong> that to <code>SearchService</code>. And the <code>Books</code> are passed in from outside, so if the Library is destroyed, the Book list still exists — that's <strong>Aggregation</strong>.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>âš¡ Quick Learn â€” Delegation & Aggregation in 60 Seconds</h3>
+            <h3>⚡ Quick Learn — Delegation & Aggregation in 60 Seconds</h3>
             <ul>
                 <li><strong>Aggregation</strong> = "Has-A" relationship (Department HAS Employees)</li>
                 <li>Aggregated objects are <strong>passed in</strong> via constructor or property, not created inside</li>
-                <li>Lifecycles are <strong>independent</strong> â€” child can survive without parent</li>
+                <li>Lifecycles are <strong>independent</strong> — child can survive without parent</li>
                 <li><strong>Delegation</strong> = passing work to another object instead of doing it yourself</li>
                 <li>C# <code>delegate</code> keyword creates a function pointer type</li>
                 <li>Delegate syntax: <code>delegate int Operation(int x, int y);</code></li>
@@ -1027,12 +1027,12 @@ Console.WriteLine(found.Author);  <span class="com">// Output: Robert Martin</sp
                 <li>Call delegate: <code>int result = op(5, 3);</code></li>
                 <li>Delegation promotes <strong>code reuse</strong> without inheritance</li>
             </ul>
-            <div class="quick-tip">ðŸ’¡ EXAM TRICK: If the question says "Department contains employees" or "Library has books" â†’ Aggregation. If it says "pass a method as a parameter" or "callback function" â†’ Delegation!</div>
+            <div class="quick-tip">💡 EXAM TRICK: If the question says "Department contains employees" or "Library has books" → Aggregation. If it says "pass a method as a parameter" or "callback function" → Delegation!</div>
         </div>`,
         questions: [
             {
                 title: 'Department-Employee Aggregation',
-                description: 'Create an `Employee` class with a `Name` property (set via constructor). Create a `Department` class with `DeptName` property and a `List<Employee> Employees` property. The Department constructor takes a name and a List<Employee> (aggregation â€” the list is passed in, not created inside). In Main, create a List<Employee> with 3 employees, create a Department "IT" with that list, then print the department name and all employee names.',
+                description: 'Create an `Employee` class with a `Name` property (set via constructor). Create a `Department` class with `DeptName` property and a `List<Employee> Employees` property. The Department constructor takes a name and a List<Employee> (aggregation — the list is passed in, not created inside). In Main, create a List<Employee> with 3 employees, create a Department "IT" with that list, then print the department name and all employee names.',
                 hint: 'Employee has constructor taking string name. Department has constructor taking (string name, List<Employee> emps). The List is created in Main and passed to Department. Use foreach to print names.',
                 requirements: [
                     { keyword: 'class Employee', desc: 'Employee class defined' },
@@ -1076,9 +1076,9 @@ Console.WriteLine(found.Author);  <span class="com">// Output: Robert Martin</sp
     {
         id: 'exception',
         name: 'Exception Handling',
-        icon: 'âš ï¸',
+        icon: '⚠ ï¸',
         syntax: `<div class="card">
-            <h3>Exception Handling â€” Syntax Reference</h3>
+            <h3>Exception Handling — Syntax Reference</h3>
             <p>Handles runtime errors so the program doesn't crash. Uses <code>try</code>, <code>catch</code>, <code>finally</code>, <code>throw</code>.</p>
 
             <div class="syntax-section">1ï¸âƒ£ Basic try-catch</div>
@@ -1095,7 +1095,7 @@ Console.WriteLine(found.Author);  <span class="com">// Output: Robert Martin</sp
 }</div>
 
             <div class="syntax-section">2ï¸âƒ£ try-catch-finally</div>
-            <p class="syntax-desc"><code>finally</code> ALWAYS runs â€” even if no error. Perfect for cleanup (close files, DB).</p>
+            <p class="syntax-desc"><code>finally</code> ALWAYS runs — even if no error. Perfect for cleanup (close files, DB).</p>
             <div class="code-block"><span class="kw">try</span> {
 
     <span class="kw">int</span>[] arr = <span class="kw">new int</span>[<span class="num">5</span>];
@@ -1113,7 +1113,7 @@ Console.WriteLine(found.Author);  <span class="com">// Output: Robert Martin</sp
     Console.WriteLine(<span class="str">"This always runs"</span>);
 }</div>
 
-            <div class="syntax-section">3ï¸âƒ£ Multiple catch (Specific â†’ General)</div>
+            <div class="syntax-section">3ï¸âƒ£ Multiple catch (Specific → General)</div>
             <p class="syntax-desc">Order matters: most specific first, general <code>Exception</code> last.</p>
             <div class="code-block"><span class="kw">try</span> {
 
@@ -1132,7 +1132,7 @@ Console.WriteLine(found.Author);  <span class="com">// Output: Robert Martin</sp
     Console.WriteLine($<span class="str">"General error: {ex.Message}"</span>);
 }</div>
 
-            <div class="syntax-section">4ï¸âƒ£ throw â€” Raise Your Own Error</div>
+            <div class="syntax-section">4ï¸âƒ£ throw — Raise Your Own Error</div>
             <p class="syntax-desc">Validate input and manually throw if invalid.</p>
             <div class="code-block"><span class="kw">public void</span> SetAge(<span class="kw">int</span> age) {
 
@@ -1204,12 +1204,12 @@ acc.Withdraw(<span class="num">200</span>);     <span class="com">// Output: Wit
                 <li>Code enters <code>try</code> block</li>
                 <li>If an exception is thrown, execution jumps to the matching <code>catch</code></li>
                 <li>Multiple catch blocks are checked top-to-bottom (always put specific before general)</li>
-                <li><code>finally</code> ALWAYS runs â€” whether an exception occurred or not</li>
+                <li><code>finally</code> ALWAYS runs — whether an exception occurred or not</li>
                 <li>Program continues normally after the try-catch-finally</li>
             </ol>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>âš¡ Quick Learn â€” Exception Handling in 60 Seconds</h3>
+            <h3>⚡ Quick Learn — Exception Handling in 60 Seconds</h3>
             <ul>
                 <li><code>try</code> = wrap risky code that might fail</li>
                 <li><code>catch</code> = handle the specific error (e.g., <code>catch (DivideByZeroException ex)</code>)</li>
@@ -1220,7 +1220,7 @@ acc.Withdraw(<span class="num">200</span>);     <span class="com">// Output: Wit
                 <li>Use <code>$"Error: {ex.Message}"</code> for string interpolation in catch blocks</li>
                 <li>Exception handling prevents <strong>program crashes</strong></li>
             </ul>
-            <div class="quick-tip">ðŸ’¡ EXAM TRICK: The flow is always: try â†’ (exception?) â†’ catch â†’ finally. The finally block runs NO MATTER WHAT, even if no exception occurred!</div>
+            <div class="quick-tip">💡 EXAM TRICK: The flow is always: try → (exception?) → catch → finally. The finally block runs NO MATTER WHAT, even if no exception occurred!</div>
         </div>`,
         questions: [
             {
@@ -1267,19 +1267,19 @@ acc.Withdraw(<span class="num">200</span>);     <span class="com">// Output: Wit
     {
         id: 'routines',
         name: 'Routines (Methods)',
-        icon: 'âš™ï¸',
+        icon: '⚙ï¸',
         syntax: `<div class="card">
-            <h3>Routines (Methods) â€” Syntax Reference</h3>
+            <h3>Routines (Methods) — Syntax Reference</h3>
             <p>A <strong>method</strong> is a named block that does a task. It may return a value or nothing (<code>void</code>).</p>
 
-            <div class="syntax-section">1ï¸âƒ£ Void Method â€” Does Something, Returns Nothing</div>
+            <div class="syntax-section">1ï¸âƒ£ Void Method — Does Something, Returns Nothing</div>
             <div class="code-block"><span class="kw">public void</span> Greet(<span class="kw">string</span> name) {
 
     Console.WriteLine($<span class="str">"Hello, {name}!"</span>);
 
 }</div>
 
-            <div class="syntax-section">2ï¸âƒ£ Return Method â€” Gives Something Back</div>
+            <div class="syntax-section">2ï¸âƒ£ Return Method — Gives Something Back</div>
             <div class="code-block"><span class="kw">public int</span> Add(<span class="kw">int</span> a, <span class="kw">int</span> b) {
 
     <span class="kw">return</span> a + b;
@@ -1296,7 +1296,7 @@ acc.Withdraw(<span class="num">200</span>);     <span class="com">// Output: Wit
 
 }</div>
 
-            <div class="syntax-section">4ï¸âƒ£ Static Method â€” No Object Needed</div>
+            <div class="syntax-section">4ï¸âƒ£ Static Method — No Object Needed</div>
             <p class="syntax-desc">Call directly on the class: <code>Calculator.CalculateTax(...)</code></p>
             <div class="code-block"><span class="kw">public static double</span> CalculateTax(<span class="kw">double</span> amount, <span class="kw">double</span> rate) {
 
@@ -1304,7 +1304,7 @@ acc.Withdraw(<span class="num">200</span>);     <span class="com">// Output: Wit
 
 }</div>
 
-            <div class="syntax-section">5ï¸âƒ£ Method Overloading â€” Same Name, Different Params</div>
+            <div class="syntax-section">5ï¸âƒ£ Method Overloading — Same Name, Different Params</div>
             <p class="syntax-desc">Compiler picks the right version based on arguments.</p>
             <div class="code-block"><span class="com">// Same name, different parameter lists</span>
 
@@ -1320,7 +1320,7 @@ acc.Withdraw(<span class="num">200</span>);     <span class="com">// Output: Wit
     <span class="kw">return</span> a * b;
 }</div>
 
-            <div class="syntax-section">6ï¸âƒ£ ref â€” Pass by Reference (Changes Affect Original)</div>
+            <div class="syntax-section">6ï¸âƒ£ ref — Pass by Reference (Changes Affect Original)</div>
             <div class="code-block"><span class="kw">public void</span> Swap(<span class="kw">ref int</span> a, <span class="kw">ref int</span> b) {
 
     <span class="kw">int</span> temp = a;
@@ -1336,7 +1336,7 @@ acc.Withdraw(<span class="num">200</span>);     <span class="com">// Output: Wit
 
 Swap(<span class="kw">ref</span> x, <span class="kw">ref</span> y);  <span class="com">// x=10, y=5 now</span></div>
 
-            <div class="syntax-section">7ï¸âƒ£ out â€” Returns Multiple Values</div>
+            <div class="syntax-section">7ï¸âƒ£ out — Returns Multiple Values</div>
             <p class="syntax-desc">Method MUST assign <code>out</code> params before returning.</p>
             <div class="code-block"><span class="kw">public void</span> GetStats(<span class="kw">int</span>[] nums, <span class="kw">out int</span> max, <span class="kw">out int</span> min) {
 
@@ -1379,7 +1379,7 @@ GetStats(numbers, <span class="kw">out int</span> maxVal, <span class="kw">out i
         Console.WriteLine($<span class="str">"Result = {result}"</span>);
     }
     
-    <span class="com">// Static method â€” no object needed</span>
+    <span class="com">// Static method — no object needed</span>
     <span class="kw">public static double</span> PI() {
         <span class="kw">return</span> <span class="num">3.14159</span>;
     }
@@ -1387,26 +1387,26 @@ GetStats(numbers, <span class="kw">out int</span> maxVal, <span class="kw">out i
 
 <span class="com">// Usage:</span>
 Calculator calc = <span class="kw">new</span> Calculator();
-<span class="kw">int</span> sum1 = calc.Add(<span class="num">5</span>, <span class="num">3</span>);         <span class="com">// Calls first Add â†’ 8</span>
-<span class="kw">int</span> sum2 = calc.Add(<span class="num">5</span>, <span class="num">3</span>, <span class="num">2</span>);       <span class="com">// Calls overloaded Add â†’ 10</span>
+<span class="kw">int</span> sum1 = calc.Add(<span class="num">5</span>, <span class="num">3</span>);         <span class="com">// Calls first Add → 8</span>
+<span class="kw">int</span> sum2 = calc.Add(<span class="num">5</span>, <span class="num">3</span>, <span class="num">2</span>);       <span class="com">// Calls overloaded Add → 10</span>
 calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</span>
-<span class="kw">double</span> pi = Calculator.PI();         <span class="com">// Static call, no object â†’ 3.14159</span></div>
+<span class="kw">double</span> pi = Calculator.PI();         <span class="com">// Static call, no object → 3.14159</span></div>
             <p><strong>What happens when a method is called:</strong></p>
             <div class="flow-diagram">
                 <div class="flow-box">calc.Add(5, 3)</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">Jump to Add method</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">a=5, b=3 on stack</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">Execute: return a+b</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">Return 8 to caller</div>
             </div>
             <p><strong>Method Overloading</strong> lets you have multiple methods with the same name but different parameter lists. The compiler picks the right one based on what you pass in.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>âš¡ Quick Learn â€” Routines (Methods) in 60 Seconds</h3>
+            <h3>⚡ Quick Learn — Routines (Methods) in 60 Seconds</h3>
             <ul>
                 <li>A <strong>method</strong> is a named block of code that does a specific task</li>
                 <li><code>void</code> = returns nothing, <code>int</code>/<code>string</code> = returns a value</li>
@@ -1418,7 +1418,7 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
                 <li><code>return</code> exits the method and sends a value back</li>
                 <li>Methods promote <strong>code reuse</strong> and <strong>modularity</strong></li>
             </ul>
-            <div class="quick-tip">ðŸ’¡ EXAM TRICK: If the question asks for "reusable code block" or "same operation with different inputs" â†’ Methods/Overloading!</div>
+            <div class="quick-tip">💡 EXAM TRICK: If the question asks for "reusable code block" or "same operation with different inputs" → Methods/Overloading!</div>
         </div>`,
         questions: [
             {
@@ -1437,7 +1437,7 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
             {
                 title: 'String Utility Routines',
                 description: 'Create a `StringUtils` class with two methods: `Reverse` (takes a string, returns the reversed string) and `CountWords` (takes a string, returns the number of words split by spaces). Make both methods static so they can be called without creating an object. In Main, call StringUtils.Reverse("hello world") and StringUtils.CountWords("hello world") and print both results.',
-                hint: 'static string Reverse(string s) â€” use char array or loop. static int CountWords(string s) â€” use s.Split(\' \').Length. Call directly: StringUtils.Reverse(...)',
+                hint: 'static string Reverse(string s) — use char array or loop. static int CountWords(string s) — use s.Split(\' \').Length. Call directly: StringUtils.Reverse(...)',
                 requirements: [
                     { keyword: 'class StringUtils', desc: 'StringUtils class defined' },
                     { keyword: 'static', desc: 'static keyword on methods' },
@@ -1467,9 +1467,9 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
     {
         id: 'razor',
         name: 'Razor View Page',
-        icon: 'ðŸ“„',
+        icon: '📄',
         syntax: `<div class="card">
-            <h3>Razor View Page (.cshtml) â€” Syntax Reference</h3>
+            <h3>Razor View Page (.cshtml) — Syntax Reference</h3>
             <p><strong>Razor</strong> lets you mix C# and HTML using <code>@</code>.</p>
 
             <div class="syntax-section">1ï¸âƒ£ Model Declaration (Top of Page)</div>
@@ -1536,7 +1536,7 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
             <div class="code-block"><span class="com">@* Raw HTML (no encoding) *@</span>
 @Html.Raw(<span class="str">"&lt;b&gt;Bold text&lt;/b&gt;"</span>)
 
-<span class="com">@* Comment â€” NOT sent to browser *@</span>
+<span class="com">@* Comment — NOT sent to browser *@</span>
 @* This is a Razor comment *@
 
 <span class="com">@* Null-safe display *@</span>
@@ -1562,13 +1562,13 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
             <p>In MVC, when a user requests a page, the <strong>Controller</strong> processes the request, prepares data (the Model), and passes it to a <strong>Razor View</strong>. The Razor engine takes the <code>.cshtml</code> file, mixes the C# code with HTML, executes the C# to get values, and sends pure HTML to the browser.</p>
             <div class="flow-diagram">
                 <div class="flow-box">User Request</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">Controller</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">return View(model)</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">Razor Engine</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">Pure HTML sent to browser</div>
             </div>
             <p>Imagine you have a <strong>Product Catalog</strong> page. The Controller fetches a list of products from the database and passes them to the Razor view. The view uses <code>@model</code> to know the type, then iterates with <code>@foreach</code> to generate a table row for each product.</p>
@@ -1608,10 +1608,10 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
     &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Laptop&lt;/td&gt;&lt;td&gt;$999.00&lt;/td&gt;&lt;/tr&gt;
     &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Mouse&lt;/td&gt;&lt;td&gt;$25.50&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;</div>
-            <p>The browser <strong>never sees</strong> the <code>@</code> symbols or C# code â€” it only gets pure HTML!</p>
+            <p>The browser <strong>never sees</strong> the <code>@</code> symbols or C# code — it only gets pure HTML!</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>âš¡ Quick Learn â€” Razor View in 60 Seconds</h3>
+            <h3>⚡ Quick Learn — Razor View in 60 Seconds</h3>
             <ul>
                 <li>Razor = HTML + C# mixed together using <code>@</code> symbol</li>
                 <li><code>@model</code> declares what data type the view receives (top of page)</li>
@@ -1624,7 +1624,7 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
                 <li><code>@* comment *</code> = Razor comment (not in final HTML)</li>
                 <li>File extension is <code>.cshtml</code></li>
             </ul>
-            <div class="quick-tip">ðŸ’¡ EXAM TRICK: The browser NEVER sees C# code. Razor engine converts @-code to pure HTML before sending to the browser!</div>
+            <div class="quick-tip">💡 EXAM TRICK: The browser NEVER sees C# code. Razor engine converts @-code to pure HTML before sending to the browser!</div>
         </div>`,
         questions: [
             {
@@ -1674,9 +1674,9 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
     {
         id: 'linq',
         name: 'LINQ',
-        icon: 'ðŸ”',
+        icon: '🔍',
         syntax: `<div class="card">
-            <h3>LINQ (Language Integrated Query) â€” Syntax Reference</h3>
+            <h3>LINQ (Language Integrated Query) — Syntax Reference</h3>
             <p><strong>LINQ</strong> = query data from collections, databases, XML in one style.</p>
 
             <div class="syntax-section">1ï¸âƒ£ Two Syntax Styles</div>
@@ -1696,8 +1696,8 @@ calc.PrintResult(sum1);               <span class="com">// Output: Result = 8</s
 
     .OrderBy(s =&gt; s.Name);</div>
 
-            <div class="syntax-section">2ï¸âƒ£ Common Operators â€” One Per Line</div>
-            <p class="syntax-desc">Each operator is a separate line â€” easier to remember for exam.</p>
+            <div class="syntax-section">2ï¸âƒ£ Common Operators — One Per Line</div>
+            <p class="syntax-desc">Each operator is a separate line — easier to remember for exam.</p>
             <div class="code-block"><span class="com">// Where: filter</span>
 <span class="kw">var</span> adults = people.Where(p =&gt; p.Age &gt;= <span class="num">18</span>);
 
@@ -1770,13 +1770,13 @@ List&lt;Student&gt; honorStudents = <span class="kw">new</span> List&lt;Student&
             <p><strong>How a LINQ query executes:</strong></p>
             <div class="flow-diagram">
                 <div class="flow-box">students (source)</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">.Where(grade &gt; 80)</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">.OrderBy(name)</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">.ToList()</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">Result</div>
             </div>
             <p>Each operator is applied like a pipeline. <code>Where</code> filters, then <code>OrderBy</code> sorts the filtered result, then <code>ToList()</code> materializes it into a list.</p>
@@ -1797,10 +1797,10 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
     Console.WriteLine($<span class="str">"{e.Name} - {e.Salary}"</span>);
 }
 <span class="com">// Output: Alice - 80000 / Charlie - 90000</span></div>
-            <p><strong>Important:</strong> LINQ uses <strong>deferred execution</strong> â€” the query doesn't actually run until you iterate over it (e.g., with foreach) or call <code>.ToList()</code> / <code>.First()</code> etc.</p>
+            <p><strong>Important:</strong> LINQ uses <strong>deferred execution</strong> — the query doesn't actually run until you iterate over it (e.g., with foreach) or call <code>.ToList()</code> / <code>.First()</code> etc.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>âš¡ Quick Learn â€” LINQ in 60 Seconds</h3>
+            <h3>⚡ Quick Learn — LINQ in 60 Seconds</h3>
             <ul>
                 <li>LINQ = query data from collections in a clean, readable way</li>
                 <li>Two syntaxes: <strong>Query</strong> (<code>from...where...select</code>) and <strong>Method</strong> (<code>.Where().Select()</code>)</li>
@@ -1815,7 +1815,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
                 <li><code>.ToList()</code> = execute query and convert to list</li>
                 <li><strong>Deferred execution</strong>: query runs only when iterated or materialized</li>
             </ul>
-            <div class="quick-tip">ðŸ’¡ EXAM TRICK: Lambda <code>=&gt;</code> is read as "goes to" or "for each." <code>s =&gt; s.Name</code> means "for each s, return s.Name"!</div>
+            <div class="quick-tip">💡 EXAM TRICK: Lambda <code>=&gt;</code> is read as "goes to" or "for each." <code>s =&gt; s.Name</code> means "for each s, return s.Name"!</div>
         </div>`,
         questions: [
             {
@@ -1864,12 +1864,12 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
     {
         id: 'annotation',
         name: 'Data Annotation',
-        icon: 'ðŸ·ï¸',
+        icon: '🏷ï¸',
         syntax: `<div class="card">
-            <h3>Data Annotation â€” Syntax Reference</h3>
+            <h3>Data Annotation — Syntax Reference</h3>
             <p>Attributes <code>[...]</code> on model properties. Namespace: <code>System.ComponentModel.DataAnnotations</code></p>
 
-            <div class="syntax-section">Full Example â€” One Property Per Block</div>
+            <div class="syntax-section">Full Example — One Property Per Block</div>
             <p class="syntax-desc">Each attribute is on its own line so you can read it clearly.</p>
             <div class="code-block"><span class="kw">using</span> System.ComponentModel.DataAnnotations;
 
@@ -1953,11 +1953,11 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
             <p>In MVC, when a user submits a form, the model binder maps the form data to a C# model object. Then, the <strong>validation engine</strong> checks each property against its data annotations. If any validation fails, errors are added to <code>ModelState</code>. The Controller checks <code>ModelState.IsValid</code> and if false, returns the view with error messages.</p>
             <div class="flow-diagram">
                 <div class="flow-box">User submits form</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">Model Binder maps data</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">Data Annotations checked</div>
-                <div class="flow-arrow">â†’</div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-box">ModelState.IsValid?</div>
             </div>
             <div class="code-block"><span class="com">// Model with Data Annotations</span>
@@ -1984,10 +1984,10 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
     [HttpPost]
     <span class="kw">public</span> ActionResult Register(RegistrationModel model) {
         <span class="kw">if</span> (!ModelState.IsValid) {
-            <span class="com">// Validation failed â€” return view with errors</span>
+            <span class="com">// Validation failed — return view with errors</span>
             <span class="kw">return</span> View(model);
         }
-        <span class="com">// Validation passed â€” save to database</span>
+        <span class="com">// Validation passed — save to database</span>
         <span class="kw">return</span> RedirectToAction(<span class="str">"Success"</span>);
     }
 }
@@ -2005,7 +2005,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
             <p><strong>Key insight:</strong> Data Annotations work with <code>@Html.ValidationMessageFor()</code> in Razor views automatically. You define the rule once on the model, and both client-side (if enabled) and server-side validation use it.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>âš¡ Quick Learn â€” Data Annotation in 60 Seconds</h3>
+            <h3>⚡ Quick Learn — Data Annotation in 60 Seconds</h3>
             <ul>
                 <li>Data Annotations = attributes <code>[...]</code> on model properties</li>
                 <li>Namespace: <code>System.ComponentModel.DataAnnotations</code></li>
@@ -2020,7 +2020,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
                 <li>Controller checks <code>ModelState.IsValid</code> to see if validation passed</li>
                 <li>Razor <code>@Html.ValidationMessageFor()</code> shows the error automatically</li>
             </ul>
-            <div class="quick-tip">ðŸ’¡ EXAM TRICK: Data Annotations = define once on the model â†’ automatic validation on BOTH server (Controller) and client (Razor View)!</div>
+            <div class="quick-tip">💡 EXAM TRICK: Data Annotations = define once on the model → automatic validation on BOTH server (Controller) and client (Razor View)!</div>
         </div>`,
         questions: [
             {
@@ -2072,12 +2072,12 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
     {
         id: 'mvc',
         name: 'MVC Theory',
-        icon: 'ðŸ—ï¸',
+        icon: '🏗ï¸',
         syntax: `<div class="card">
-            <h3>MVC (Model-View-Controller) â€” Architecture</h3>
+            <h3>MVC (Model-View-Controller) — Architecture</h3>
             <p>Three layers, one job each. Model = data, View = UI, Controller = brain.</p>
 
-            <div class="syntax-section">1ï¸âƒ£ Model â€” Data + Business Logic</div>
+            <div class="syntax-section">1ï¸âƒ£ Model — Data + Business Logic</div>
             <div class="code-block"><span class="kw">public class</span> <span class="cls">Product</span> {
 
     <span class="kw">public int</span> Id { <span class="kw">get</span>; <span class="kw">set</span>; }
@@ -2097,7 +2097,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
     }
 }</div>
 
-            <div class="syntax-section">2ï¸âƒ£ Controller â€” The Brain (Handles Requests)</div>
+            <div class="syntax-section">2ï¸âƒ£ Controller — The Brain (Handles Requests)</div>
             <p class="syntax-desc">Inherits from <code>Controller</code>. Returns <code>ActionResult</code>.</p>
             <div class="code-block"><span class="kw">public class</span> <span class="cls">ProductController</span> : Controller {
 
@@ -2154,7 +2154,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
     }
 }</div>
 
-            <div class="syntax-section">3ï¸âƒ£ View â€” Razor .cshtml (UI Only)</div>
+            <div class="syntax-section">3ï¸âƒ£ View — Razor .cshtml (UI Only)</div>
             <p class="syntax-desc">No logic, just display. Receives model from Controller.</p>
             <div class="code-block"><span class="com">@* Views/Product/Index.cshtml *@</span>
 @model IEnumerable&lt;Product&gt;
@@ -2175,7 +2175,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
                 <tr><td>3. Controller</td><td>ProductController.Details(5) called</td></tr>
                 <tr><td>4. Model</td><td>Controller asks Model/Repo for data</td></tr>
                 <tr><td>5. View Result</td><td>Controller: return View(product)</td></tr>
-                <tr><td>6. Razor</td><td>.cshtml â†’ pure HTML</td></tr>
+                <tr><td>6. Razor</td><td>.cshtml → pure HTML</td></tr>
                 <tr><td>7. Response</td><td>HTML sent to browser</td></tr>
             </table>
         </div>`,
@@ -2183,10 +2183,10 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
             <h3>How MVC Actually Works</h3>
             <p>Imagine a <strong>restaurant</strong>. The MVC pattern is like a restaurant operation:</p>
             <ul style="margin-left:20px; line-height:2.2; font-size:14px;">
-                <li><strong>Customer (User)</strong> â†’ makes a request (order)</li>
-                <li><strong>Waiter (Controller)</strong> â†’ receives the request, knows what to do, coordinates between kitchen and customer</li>
-                <li><strong>Kitchen (Model)</strong> â†’ prepares the actual data (food), contains the business logic (recipes)</li>
-                <li><strong>Plate/Dish (View)</strong> â†’ the presentation of the food to the customer</li>
+                <li><strong>Customer (User)</strong> → makes a request (order)</li>
+                <li><strong>Waiter (Controller)</strong> → receives the request, knows what to do, coordinates between kitchen and customer</li>
+                <li><strong>Kitchen (Model)</strong> → prepares the actual data (food), contains the business logic (recipes)</li>
+                <li><strong>Plate/Dish (View)</strong> → the presentation of the food to the customer</li>
             </ul>
             <div class="code-block"><span class="com">// Full example: E-Commerce Product Page</span>
 
@@ -2233,12 +2233,12 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
             <p><strong>Routing:</strong> Clean URLs like <code>/Product/Details/5</code> instead of <code>product.aspx?id=5</code>.</p>
         </div>`,
         quickLearn: `<div class="quick-learn">
-            <h3>âš¡ Quick Learn â€” MVC Theory in 60 Seconds</h3>
+            <h3>⚡ Quick Learn — MVC Theory in 60 Seconds</h3>
             <ul>
                 <li><strong>M</strong>odel = Data + Business Logic (database, validation, rules)</li>
                 <li><strong>V</strong>iew = UI (Razor .cshtml files, pure presentation)</li>
                 <li><strong>C</strong>ontroller = Traffic cop, receives requests, calls Model, returns View</li>
-                <li>Flow: Request â†’ Route â†’ Controller â†’ Model â†’ View â†’ HTML Response</li>
+                <li>Flow: Request → Route → Controller → Model → View → HTML Response</li>
                 <li>Controller inherits from <code>Controller</code> base class</li>
                 <li>Actions return <code>ActionResult</code> (View, Redirect, JSON, etc.)</li>
                 <li><code>[HttpGet]</code> = show form, <code>[HttpPost]</code> = process submitted form</li>
@@ -2248,12 +2248,12 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
                 <li>URL pattern: <code>/Controller/Action/Id</code></li>
                 <li><strong>Separation of Concerns</strong> = each part does ONE thing</li>
             </ul>
-            <div class="quick-tip">ðŸ’¡ EXAM TRICK: Restaurant analogy â€” Waiter=Controller, Kitchen=Model, Plate=View. Controller NEVER shows data directly; it always passes it through the Model to the View!</div>
+            <div class="quick-tip">💡 EXAM TRICK: Restaurant analogy — Waiter=Controller, Kitchen=Model, Plate=View. Controller NEVER shows data directly; it always passes it through the Model to the View!</div>
         </div>`,
         questions: [
             {
                 title: 'Basic Product Controller',
-                description: 'Create a `ProductController` that inherits from `Controller`. It should have an `Index()` action method that returns `View()`. It should have a `Details(int id)` action that returns `View()`. Both should be `[HttpGet]`. Add a `[HttpPost]` `Create(Product product)` action that checks `ModelState.IsValid` â€” if valid, `RedirectToAction("Index")`, otherwise `return View(product)`.',
+                description: 'Create a `ProductController` that inherits from `Controller`. It should have an `Index()` action method that returns `View()`. It should have a `Details(int id)` action that returns `View()`. Both should be `[HttpGet]`. Add a `[HttpPost]` `Create(Product product)` action that checks `ModelState.IsValid` — if valid, `RedirectToAction("Index")`, otherwise `return View(product)`.',
                 hint: 'class ProductController : Controller. Use [HttpGet], [HttpPost], ActionResult, View(), RedirectToAction("Index"), ModelState.IsValid.',
                 requirements: [
                     { keyword: 'class ProductController', desc: 'ProductController class defined' },
@@ -2268,7 +2268,7 @@ List&lt;Employee&gt; employees = <span class="kw">new</span> List&lt;Employee&gt
             },
             {
                 title: 'Student Controller with Model',
-                description: 'Create a `StudentController` inheriting from Controller. It has a `List()` action that creates a `List<Student>` with 2 students (just use new Student { Name = "Alice" } etc.) and returns `View(students)`. It has a `[HttpGet] Create()` action returning `View()`. It has a `[HttpPost] Create(Student student)` action that checks ModelState.IsValid â€” if valid, RedirectToAction("List"), else View(student).',
+                description: 'Create a `StudentController` inheriting from Controller. It has a `List()` action that creates a `List<Student>` with 2 students (just use new Student { Name = "Alice" } etc.) and returns `View(students)`. It has a `[HttpGet] Create()` action returning `View()`. It has a `[HttpPost] Create(Student student)` action that checks ModelState.IsValid — if valid, RedirectToAction("List"), else View(student).',
                 hint: 'class StudentController : Controller. List<Student> students = new List<Student>(). return View(students). [HttpGet] and [HttpPost] on Create. ModelState.IsValid check.',
                 requirements: [
                     { keyword: 'class StudentController', desc: 'StudentController class defined' },
@@ -2324,9 +2324,9 @@ function renderSidebar() {
     list.innerHTML = `
         <div class="topic-group">
             <div class="topic-header ${coverActive ? 'active' : ''}" onclick="selectCover()" id="topicHeader-cover">
-                <span>ðŸ </span>
+                <span>🏠</span>
                 <span>Cover Page</span>
-                <span class="arrow">â–¶</span>
+                <span class="arrow">▶</span>
             </div>
         </div>
     ` + topics.map((t, i) => `
@@ -2336,36 +2336,36 @@ function renderSidebar() {
                  id="topicHeader-${i}">
                 <span>${t.icon}</span>
                 <span>${t.name}</span>
-                <span class="arrow">â–¶</span>
+                <span class="arrow">▶</span>
             </div>
             <div class="sub-pages ${i === currentTopic ? 'show' : ''}" id="subPages-${i}">
                 <div class="sub-page-link ${currentSubPage === 'syntax' && i === currentTopic ? 'active' : ''}" 
                      onclick="selectSubPage(${i}, 'syntax')">
-                    ðŸ“ Syntax <span class="badge syntax">Page 1</span>
+                    📝 Syntax <span class="badge syntax">Page 1</span>
                 </div>
                 <div class="sub-page-link ${currentSubPage === 'howItWorks' && i === currentTopic ? 'active' : ''}" 
                      onclick="selectSubPage(${i}, 'howItWorks')">
-                    ðŸ”§ How It Works <span class="badge works">Page 2</span>
+                    🔧 How It Works <span class="badge works">Page 2</span>
                 </div>
                 <div class="sub-page-link ${currentSubPage === 'quickLearn' && i === currentTopic ? 'active' : ''}" 
                      onclick="selectSubPage(${i}, 'quickLearn')">
-                    âš¡ Quick Learn <span class="badge quick">Cheat Sheet</span>
+                    ⚡ Quick Learn <span class="badge quick">Cheat Sheet</span>
                 </div>
                 <div style="height:1px;background:#334155;margin:8px 16px 6px 0;"></div>
-                <div style="font-size:10px;color:#64748b;padding:2px 16px;letter-spacing:0.6px;font-weight:700;">ðŸ“ INDIVIDUAL PROBLEMS</div>
+                <div style="font-size:10px;color:#64748b;padding:2px 16px;letter-spacing:0.6px;font-weight:700;">📝 INDIVIDUAL PROBLEMS</div>
                 ${t.questions.map((q, qi) => {
                     const qPage = `q${qi}`;
                     const isActive = currentSubPage === qPage && i === currentTopic;
                     const qId = `${t.id}-${qi}`;
                     const solved = solvedQuestions[qId];
                     return `<div class="sub-page-link ${isActive ? 'active' : ''}" onclick="selectSubPage(${i}, '${qPage}')" style="${solved ? 'border-left-color:var(--success);color:var(--success);' : ''}">
-                        ${solved ? 'âœ…' : 'â“'} Problem ${qi+1} <span class="badge ${solved ? 'works' : 'questions'}" style="${solved ? 'background:#dcfce7;color:#166534' : ''}">${solved ? 'Solved' : 'Q'+(qi+1)}</span>
+                        ${solved ? '✅' : 'â“'} Problem ${qi+1} <span class="badge ${solved ? 'works' : 'questions'}" style="${solved ? 'background:#dcfce7;color:#166534' : ''}">${solved ? 'Solved' : 'Q'+(qi+1)}</span>
                         <div style="font-size:11px;color:inherit;opacity:0.7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px">${q.title}</div>
                     </div>`;
                 }).join('')}
                 <div class="sub-page-link ${currentSubPage === 'questions' && i === currentTopic ? 'active' : ''}" 
                      onclick="selectSubPage(${i}, 'questions')">
-                    ðŸ“‹ All Problems <span class="badge questions">Overview</span>
+                    📋 All Problems <span class="badge questions">Overview</span>
                 </div>
             </div>
         </div>
@@ -2400,47 +2400,47 @@ function renderPage() {
         content = `
             <div class="cover-hero">
                 <div style="position:relative;z-index:1;">
-                    <div style="display:inline-block;background:rgba(255,255,255,0.15);padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:14px;border:1px solid rgba(255,255,255,0.2);">ðŸ“… Last-Day Crash Course â€¢ 2026 â€¢ 9 Topics â€¢ 27 Problems</div>
-                    <h1>ðŸ“– C# Visual Programming<br>Exam Trainer</h1>
-                    <p>Master 9 core topics, solve 27 real-life problems, and get instant keyword-based checking â€” everything you need the night before the exam, in one clean trainer.</p>
+                    <div style="display:inline-block;background:rgba(255,255,255,0.15);padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:14px;border:1px solid rgba(255,255,255,0.2);">📍… Last-Day Crash Course • 2026 • 9 Topics • 27 Problems</div>
+                    <h1>📖 C# Visual Programming<br>Exam Trainer</h1>
+                    <p>Master 9 core topics, solve 27 real-life problems, and get instant keyword-based checking — everything you need the night before the exam, in one clean trainer.</p>
                     <div class="cover-stats">
-                        <div class="cover-stat">ðŸ“š 9 Topics</div>
-                        <div class="cover-stat">ðŸ§© 27 Problems</div>
-                        <div class="cover-stat">âš¡ Instant Checker</div>
-                        <div class="cover-stat">âœ… ${solvedCount}/${totalProblems} Solved â€¢ ${progress}%</div>
+                        <div class="cover-stat">📚 9 Topics</div>
+                        <div class="cover-stat">🧩 27 Problems</div>
+                        <div class="cover-stat">⚡ Instant Checker</div>
+                        <div class="cover-stat">✅ ${solvedCount}/${totalProblems} Solved • ${progress}%</div>
                     </div>
-                    <button class="cover-btn" onclick="selectSubPage(0,'syntax')">ðŸš€ Start Learning â€” Polymorphism â†’</button>
-                    <button class="cover-btn secondary" onclick="selectCover()" style="margin-left:10px;">ðŸ  Cover</button>
+                    <button class="cover-btn" onclick="selectSubPage(0,'syntax')">🚀 Start Learning — Polymorphism →</button>
+                    <button class="cover-btn secondary" onclick="selectCover()" style="margin-left:10px;">🏠 Cover</button>
                 </div>
             </div>
 
             <div class="card">
-                <h3>ðŸ—ºï¸ What You'll Master â€” Click Any Card to Jump</h3>
-                <p style="color:var(--text-light);font-size:14px;margin-bottom:10px;">Each topic has 4 layers: Syntax (with line gaps) â†’ How It Works â†’ Quick Learn â†’ 3 Individual Problem Pages.</p>
+                <h3>🗺ï¸ What You'll Master — Click Any Card to Jump</h3>
+                <p style="color:var(--text-light);font-size:14px;margin-bottom:10px;">Each topic has 4 layers: Syntax (with line gaps) → How It Works → Quick Learn → 3 Individual Problem Pages.</p>
                 <div class="cover-grid">
-                    ${topics.map((t,i)=>`<div class="cover-card" onclick="selectSubPage(${i},'syntax')"><div class="icon">${t.icon}</div><h4>${i+1}. ${t.name}</h4><p>${t.questions.length} problems â€¢ Syntax + How It Works + Quick Learn</p><div style="margin-top:8px;font-size:12px;color:var(--primary);font-weight:700;">Open â†’</div></div>`).join('')}
+                    ${topics.map((t,i)=>`<div class="cover-card" onclick="selectSubPage(${i},'syntax')"><div class="icon">${t.icon}</div><h4>${i+1}. ${t.name}</h4><p>${t.questions.length} problems • Syntax + How It Works + Quick Learn</p><div style="margin-top:8px;font-size:12px;color:var(--primary);font-weight:700;">Open →</div></div>`).join('')}
                 </div>
             </div>
 
             <div class="card">
-                <h3>âš¡ How to Use (30-Minute Loop)</h3>
+                <h3>⚡ How to Use (30-Minute Loop)</h3>
                 <div class="cover-steps">
                     <div class="cover-step"><div class="num">1</div><h5>Learn Syntax</h5><p>Spaced blocks, one concept per line</p></div>
                     <div class="cover-step"><div class="num">2</div><h5>How It Works</h5><p>Real story + flow diagram</p></div>
                     <div class="cover-step"><div class="num">3</div><h5>60-sec Cheat</h5><p>Quick Learn + Exam Trick</p></div>
                     <div class="cover-step"><div class="num">4</div><h5>Solve</h5><p>One problem per page, instant check</p></div>
                 </div>
-                <div class="quick-tip">ðŸ’¡ Pro tip: The checker looks for keywords exactly as examiners do â€” include <code>virtual</code>, <code>override</code>, <code>List&lt;T&gt;</code> etc. as required.</div>
+                <div class="quick-tip">💡 Pro tip: The checker looks for keywords exactly as examiners do — include <code>virtual</code>, <code>override</code>, <code>List&lt;T&gt;</code> etc. as required.</div>
             </div>
 
             <div class="card" style="background: linear-gradient(135deg, #fef3c7, #fff7ed); border-color: #fde68a;">
-                <h3>ðŸŽ¯ Exam Day Checklist</h3>
+                <h3>🎯 Exam Day Checklist</h3>
                 <ul style="margin-left:18px; line-height:1.9; font-size:14px;">
-                    <li><code>virtual</code> in base, <code>override</code> in child â€” polymorphism</li>
-                    <li>Unrelated â†’ <code>interface</code>, related + shared state â†’ <code>abstract class</code></li>
-                    <li><code>try</code> â†’ <code>catch (Specific)</code> â†’ <code>catch (Exception)</code> â†’ <code>finally</code> always runs</li>
+                    <li><code>virtual</code> in base, <code>override</code> in child — polymorphism</li>
+                    <li>Unrelated → <code>interface</code>, related + shared state → <code>abstract class</code></li>
+                    <li><code>try</code> → <code>catch (Specific)</code> → <code>catch (Exception)</code> → <code>finally</code> always runs</li>
                     <li>Razor: <code>@model</code> top, <code>@foreach</code>, <code>@Html.TextBoxFor</code>, <code>@* *@</code> comment</li>
-                    <li>LINQ: <code>.Where(s => s.Grade > 80)</code>, <code>=&gt;</code> = â€œgoes toâ€, <code>.ToList()</code> to run</li>
+                    <li>LINQ: <code>.Where(s => s.Grade > 80)</code>, <code>=&gt;</code> = “goes to”, <code>.ToList()</code> to run</li>
                     <li>Data Annotation: <code>[Required]</code>, <code>[Range]</code>, <code>ModelState.IsValid</code></li>
                 </ul>
             </div>
@@ -2448,34 +2448,34 @@ function renderPage() {
             <div class="card" style="text-align:center; background: linear-gradient(135deg, #eef2ff, #f0fdf4); border: 2px dashed var(--primary);">
                 <h3>Ready to Start?</h3>
                 <p style="color:var(--text-light);">You are ${progress}% done. Continue where you left off or start fresh.</p>
-                <button class="cover-btn" onclick="selectSubPage(0,'syntax')">ðŸ“ Start with Syntax â€” Polymorphism</button>
-                <button class="cover-btn secondary" onclick="selectSubPage(0,'q0')" style="margin-left:10px;">ðŸ§© Jump to First Problem</button>
+                <button class="cover-btn" onclick="selectSubPage(0,'syntax')">📝 Start with Syntax — Polymorphism</button>
+                <button class="cover-btn secondary" onclick="selectSubPage(0,'q0')" style="margin-left:10px;">🧩 Jump to First Problem</button>
             </div>
         `;
     } else {
         const topic = topics[currentTopic];
         if (currentSubPage === 'syntax') {
         content = `
-            <div class="page-title">${topic.icon} ${topic.name} â€” Syntax</div>
-            <div class="page-subtitle">Page 1 of 3 â€” Learn the syntax and keywords</div>
+            <div class="page-title">${topic.icon} ${topic.name} — Syntax</div>
+            <div class="page-subtitle">Page 1 of 3 — Learn the syntax and keywords</div>
             ${topic.syntax}
         `;
     } else if (currentSubPage === 'howItWorks') {
         content = `
-            <div class="page-title">${topic.icon} ${topic.name} â€” How It Works</div>
-            <div class="page-subtitle">Page 2 of 3 â€” Understand the real-world mechanics</div>
+            <div class="page-title">${topic.icon} ${topic.name} — How It Works</div>
+            <div class="page-subtitle">Page 2 of 3 — Understand the real-world mechanics</div>
             ${topic.howItWorks}
         `;
     } else if (currentSubPage === 'quickLearn') {
         content = `
-            <div class="page-title">${topic.icon} ${topic.name} â€” Quick Learn</div>
-            <div class="page-subtitle">Cheat Sheet â€” The fastest way to remember everything</div>
+            <div class="page-title">${topic.icon} ${topic.name} — Quick Learn</div>
+            <div class="page-subtitle">Cheat Sheet — The fastest way to remember everything</div>
             ${topic.syntax}
             ${topic.quickLearn}
             ${topic.howItWorks}
             <div class="nav-buttons">
-                <button class="btn btn-secondary" onclick="selectSubPage(${currentTopic}, 'howItWorks')">â† Back to How It Works</button>
-                <button class="btn btn-primary" onclick="selectSubPage(${currentTopic}, 'q0')">Go to Problem 1 â†’</button>
+                <button class="btn btn-secondary" onclick="selectSubPage(${currentTopic}, 'howItWorks')">← Back to How It Works</button>
+                <button class="btn btn-primary" onclick="selectSubPage(${currentTopic}, 'q0')">Go to Problem 1 →</button>
             </div>
         `;
     } else if (currentSubPage.startsWith('q')) {
@@ -2484,10 +2484,10 @@ function renderPage() {
         const qId = `${topic.id}-${qi}`;
         const isSolved = solvedQuestions[qId];
         content = `
-            <div class="page-title">${topic.icon} ${topic.name} â€” Problem ${qi + 1} of ${topic.questions.length}</div>
-            <div class="page-subtitle">Individual problem â€” Focus on one challenge at a time. Solve and check instantly.</div>
+            <div class="page-title">${topic.icon} ${topic.name} — Problem ${qi + 1} of ${topic.questions.length}</div>
+            <div class="page-subtitle">Individual problem — Focus on one challenge at a time. Solve and check instantly.</div>
             <div style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:8px;padding:12px 16px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
-                <div style="font-size:13px;color:var(--primary-dark);font-weight:600;">ðŸ“ You are on Problem ${qi + 1} â€” ${q.title}</div>
+                <div style="font-size:13px;color:var(--primary-dark);font-weight:600;">📍 You are on Problem ${qi + 1} — ${q.title}</div>
                 <div style="font-size:12px;color:var(--text-light);">Progress: ${qi + 1} / ${topic.questions.length} in this topic</div>
             </div>
             ${topic.quickLearn}
@@ -2498,7 +2498,7 @@ function renderPage() {
                 
                 <button class="btn btn-secondary" style="margin-bottom: 14px; font-size: 13px; padding: 6px 14px;" 
                         onclick="toggleHint('${qId}')">
-                    ðŸ’¡ Show Hint
+                    💡 Show Hint
                 </button>
                 
                 <div class="hint-box" id="hint-${qId}">
@@ -2508,7 +2508,7 @@ function renderPage() {
                 <div class="editor-wrapper" id="wrapper-${qId}">
                     <div class="editor-label">
                         <span><span class="dot" style="background:#ff5f56;"></span><span class="dot" style="background:#ffbd2e;"></span><span class="dot" style="background:#27c93f;"></span> ${q.title.replace(/\s/g, '_')}.cs</span>
-                        <span style="display:flex;align-items:center;gap:10px;"><span>C#</span><button onclick="toggleExpand('${qId}')" id="expandBtn-${qId}" style="background:#3a3a3a;color:#ccc;border:1px solid #555;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer;">â›¶ Expand</button></span>
+                        <span style="display:flex;align-items:center;gap:10px;"><span>C#</span><button onclick="toggleExpand('${qId}')" id="expandBtn-${qId}" style="background:#3a3a3a;color:#ccc;border:1px solid #555;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer;">⛶ Expand</button></span>
                     </div>
                     <textarea class="code-editor" 
                                id="editor-${qId}" 
@@ -2525,12 +2525,12 @@ class Program
                 
                 <div style="margin-top: 14px; display: flex; gap: 10px;">
                     <button class="btn btn-primary" onclick="checkCode('${topic.id}', ${qi})">
-                        âœ“ Check Code
+                        ✓ Check Code
                     </button>
                     <button class="btn btn-secondary" onclick="clearCode('${qId}')">
-                        ðŸ—‘ Clear
+                        🗑 Clear
                     </button>
-                    <button class="btn btn-secondary" onclick="toggleExpand('${qId}')" style="margin-left:auto;font-size:12px;padding:8px 14px;">â›¶ Toggle Full Height</button>
+                    <button class="btn btn-secondary" onclick="toggleExpand('${qId}')" style="margin-left:auto;font-size:12px;padding:8px 14px;">⛶ Toggle Full Height</button>
                 </div>
                 
                 <div class="feedback-box" id="feedback-${qId}"></div>
@@ -2538,10 +2538,10 @@ class Program
         `;
     } else if (currentSubPage === 'questions') {
         content = `
-            <div class="page-title">${topic.icon} ${topic.name} â€” Practice Questions</div>
-            <div class="page-subtitle">Page 3 of 3 â€” Solve 3 real-life problems. Write code and check it!</div>
+            <div class="page-title">${topic.icon} ${topic.name} — Practice Questions</div>
+            <div class="page-subtitle">Page 3 of 3 — Solve 3 real-life problems. Write code and check it!</div>
             ${topic.quickLearn}
-            <h2 style="margin: 28px 0 10px; color: var(--text-dark);">ðŸ“ 3 Real-Life Problems to Solve</h2>
+            <h2 style="margin: 28px 0 10px; color: var(--text-dark);">📝 3 Real-Life Problems to Solve</h2>
             <p style="color: var(--text-light); margin-bottom: 20px;">Write C# code in the editor for each problem. Click "Check Code" to verify your solution.</p>
         `;
         
@@ -2556,7 +2556,7 @@ class Program
                     
                     <button class="btn btn-secondary" style="margin-bottom: 14px; font-size: 13px; padding: 6px 14px;" 
                             onclick="toggleHint('${qId}')">
-                        ðŸ’¡ Show Hint
+                        💡 Show Hint
                     </button>
                     
                     <div class="hint-box" id="hint-${qId}">
@@ -2566,7 +2566,7 @@ class Program
                     <div class="editor-wrapper" id="wrapper-${qId}">
                         <div class="editor-label">
                             <span><span class="dot" style="background:#ff5f56;"></span><span class="dot" style="background:#ffbd2e;"></span><span class="dot" style="background:#27c93f;"></span> ${q.title.replace(/\s/g, '_')}.cs</span>
-                            <span style="display:flex;align-items:center;gap:10px;"><span>C#</span><button onclick="toggleExpand('${qId}')" id="expandBtn-${qId}" style="background:#3a3a3a;color:#ccc;border:1px solid #555;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer;">â›¶ Expand</button></span>
+                            <span style="display:flex;align-items:center;gap:10px;"><span>C#</span><button onclick="toggleExpand('${qId}')" id="expandBtn-${qId}" style="background:#3a3a3a;color:#ccc;border:1px solid #555;border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer;">⛶ Expand</button></span>
                         </div>
                         <textarea class="code-editor" 
                                    id="editor-${qId}" 
@@ -2583,12 +2583,12 @@ class Program
                     
                     <div style="margin-top: 14px; display: flex; gap: 10px;">
                         <button class="btn btn-primary" onclick="checkCode('${topic.id}', ${qi})">
-                            âœ“ Check Code
+                            ✓ Check Code
                         </button>
                         <button class="btn btn-secondary" onclick="clearCode('${qId}')">
-                            ðŸ—‘ Clear
+                            🗑 Clear
                         </button>
-                        <button class="btn btn-secondary" onclick="toggleExpand('${qId}')" style="margin-left:auto;font-size:12px;padding:8px 14px;">â›¶ Toggle Full Height</button>
+                        <button class="btn btn-secondary" onclick="toggleExpand('${qId}')" style="margin-left:auto;font-size:12px;padding:8px 14px;">⛶ Toggle Full Height</button>
                     </div>
                     
                     <div class="feedback-box" id="feedback-${qId}"></div>
@@ -2600,29 +2600,29 @@ class Program
     // Navigation buttons
     content += `<div class="nav-buttons">`;
     if (currentSubPage === 'syntax') {
-        content += `<div></div><button class="btn btn-primary" onclick="selectSubPage(${currentTopic}, 'howItWorks')">Next: How It Works â†’</button>`;
+        content += `<div></div><button class="btn btn-primary" onclick="selectSubPage(${currentTopic}, 'howItWorks')">Next: How It Works →</button>`;
     } else if (currentSubPage === 'howItWorks') {
-        content += `<button class="btn btn-secondary" onclick="selectSubPage(${currentTopic}, 'syntax')">â† Back to Syntax</button><button class="btn btn-primary" onclick="selectSubPage(${currentTopic}, 'quickLearn')">Next: Quick Learn â†’</button>`;
+        content += `<button class="btn btn-secondary" onclick="selectSubPage(${currentTopic}, 'syntax')">← Back to Syntax</button><button class="btn btn-primary" onclick="selectSubPage(${currentTopic}, 'quickLearn')">Next: Quick Learn →</button>`;
     } else if (currentSubPage === 'quickLearn') {
-        content += `<button class="btn btn-secondary" onclick="selectSubPage(${currentTopic}, 'howItWorks')">â† Back to How It Works</button><button class="btn btn-primary" onclick="selectSubPage(${currentTopic}, 'questions')">Next: Questions â†’</button>`;
+        content += `<button class="btn btn-secondary" onclick="selectSubPage(${currentTopic}, 'howItWorks')">← Back to How It Works</button><button class="btn btn-primary" onclick="selectSubPage(${currentTopic}, 'questions')">Next: Questions →</button>`;
     } else if (currentSubPage.startsWith('q')) {
          const qi = parseInt(currentSubPage.substring(1));
          if (qi === 0) {
-             content += `<button class="btn btn-secondary" onclick="selectSubPage(${currentTopic}, 'quickLearn')">â† Back to Quick Learn</button>`;
+             content += `<button class="btn btn-secondary" onclick="selectSubPage(${currentTopic}, 'quickLearn')">← Back to Quick Learn</button>`;
          } else {
-             content += `<button class="btn btn-secondary" onclick="selectSubPage(${currentTopic}, 'q${qi-1}')">â† Problem ${qi}</button>`;
+             content += `<button class="btn btn-secondary" onclick="selectSubPage(${currentTopic}, 'q${qi-1}')">← Problem ${qi}</button>`;
          }
          if (qi < topic.questions.length - 1) {
-             content += `<button class="btn btn-primary" onclick="selectSubPage(${currentTopic}, 'q${qi+1}')">Next: Problem ${qi+2} â†’</button>`;
+             content += `<button class="btn btn-primary" onclick="selectSubPage(${currentTopic}, 'q${qi+1}')">Next: Problem ${qi+2} →</button>`;
          } else {
-             content += `<button class="btn btn-primary" onclick="selectSubPage(${currentTopic}, 'questions')">View All Problems â†’</button>`;
+             content += `<button class="btn btn-primary" onclick="selectSubPage(${currentTopic}, 'questions')">View All Problems →</button>`;
          }
      } else if (currentSubPage === 'questions') {
-         content += `<button class="btn btn-secondary" onclick="selectSubPage(${currentTopic}, 'q${topic.questions.length-1}')">â† Back to Problem ${topic.questions.length}</button>`;
+         content += `<button class="btn btn-secondary" onclick="selectSubPage(${currentTopic}, 'q${topic.questions.length-1}')">← Back to Problem ${topic.questions.length}</button>`;
          if (currentTopic < topics.length - 1) {
-             content += `<button class="btn btn-primary" onclick="selectSubPage(${currentTopic + 1}, 'syntax')">Next Topic: ${topics[currentTopic + 1].name} â†’</button>`;
+             content += `<button class="btn btn-primary" onclick="selectSubPage(${currentTopic + 1}, 'syntax')">Next Topic: ${topics[currentTopic + 1].name} →</button>`;
          } else {
-             content += `<button class="btn btn-primary" onclick="selectSubPage(0, 'syntax')">ðŸ  Back to Start</button>`;
+             content += `<button class="btn btn-primary" onclick="selectSubPage(0, 'syntax')">🏠 Back to Start</button>`;
          }
      }
     content += `</div>`;
@@ -2647,7 +2647,7 @@ function checkCode(topicId, questionIndex) {
     
     if (!code.trim()) {
         feedbackBox.className = 'feedback-box error show';
-        feedbackBox.innerHTML = 'âš ï¸ Your code editor is empty. Please write some code first!';
+        feedbackBox.innerHTML = '⚠ ï¸ Your code editor is empty. Please write some code first!';
         questionCard.className = 'question-card failed';
         return;
     }
@@ -2665,13 +2665,13 @@ function checkCode(topicId, questionIndex) {
     let feedbackHtml = '';
     
     if (allFound) {
-        feedbackHtml = `<strong>âœ… Excellent! All requirements met!</strong><br>Your code contains all the key elements needed for this problem.`;
+        feedbackHtml = `<strong>✅ Excellent! All requirements met!</strong><br>Your code contains all the key elements needed for this problem.`;
         feedbackHtml += `<ul class="req-list">`;
         results.forEach(r => {
-            feedbackHtml += `<li><span class="req-check found">âœ“</span> ${r.desc} â€” <code style="background:#d1fae5;padding:1px 4px;border-radius:3px;">${r.keyword}</code></li>`;
+            feedbackHtml += `<li><span class="req-check found">✓</span> ${r.desc} — <code style="background:#d1fae5;padding:1px 4px;border-radius:3px;">${r.keyword}</code></li>`;
         });
         feedbackHtml += `</ul>`;
-        feedbackHtml += `<br><strong>ðŸ’¡ Note:</strong> This is a keyword-based checker. In a real exam, make sure your code also compiles and runs correctly!`;
+        feedbackHtml += `<br><strong>💡 Note:</strong> This is a keyword-based checker. In a real exam, make sure your code also compiles and runs correctly!`;
         
         feedbackBox.className = 'feedback-box success show';
         questionCard.className = 'question-card solved';
@@ -2680,18 +2680,18 @@ function checkCode(topicId, questionIndex) {
         const foundCount = results.filter(r => r.found).length;
         const totalCount = results.length;
         
-        feedbackHtml = `<strong>ðŸ“Š Progress: ${foundCount}/${totalCount} requirements found</strong>`;
+        feedbackHtml = `<strong>📊 Progress: ${foundCount}/${totalCount} requirements found</strong>`;
         feedbackHtml += `<ul class="req-list">`;
         results.forEach(r => {
-            const icon = r.found ? 'âœ“' : 'âœ—';
+            const icon = r.found ? '✓' : '✗';
             const cls = r.found ? 'found' : 'missing';
-            feedbackHtml += `<li><span class="req-check ${cls}">${icon}</span> ${r.desc} â€” <code style="background:${r.found ? '#d1fae5' : '#fee2e2'};padding:1px 4px;border-radius:3px;">${r.keyword}</code></li>`;
+            feedbackHtml += `<li><span class="req-check ${cls}">${icon}</span> ${r.desc} — <code style="background:${r.found ? '#d1fae5' : '#fee2e2'};padding:1px 4px;border-radius:3px;">${r.keyword}</code></li>`;
         });
         feedbackHtml += `</ul>`;
         
         const missing = results.filter(r => !r.found);
         if (missing.length > 0) {
-            feedbackHtml += `<br><strong>âš ï¸ Missing:</strong> ${missing.map(m => `"${m.keyword}"`).join(', ')}`;
+            feedbackHtml += `<br><strong>⚠ ï¸ Missing:</strong> ${missing.map(m => `"${m.keyword}"`).join(', ')}`;
             feedbackHtml += `<br><em>Check the hint above for guidance on what to include.</em>`;
         }
         
@@ -2721,11 +2721,11 @@ function toggleExpand(qId) {
     if (!editor) return;
     editor.classList.toggle('expanded');
     const isExpanded = editor.classList.contains('expanded');
-    if (btn) btn.textContent = isExpanded ? 'ðŸ—— Collapse' : 'â›¶ Expand';
+    if (btn) btn.textContent = isExpanded ? '🗺— Collapse' : '⛶ Expand';
     // Also update the bottom toggle button text if present
     const bottomBtns = document.querySelectorAll(`button[onclick="toggleExpand('${qId}')"]`);
     bottomBtns.forEach(b => {
-        if (b.id !== `expandBtn-${qId}`) b.textContent = isExpanded ? 'ðŸ—— Collapse Full Height' : 'â›¶ Toggle Full Height';
+        if (b.id !== `expandBtn-${qId}`) b.textContent = isExpanded ? '🗺— Collapse Full Height' : '⛶ Toggle Full Height';
     });
     if (isExpanded) {
         setTimeout(() => editor.scrollIntoView({behavior:'smooth', block:'center'}), 100);
